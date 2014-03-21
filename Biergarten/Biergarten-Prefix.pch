@@ -11,6 +11,39 @@
 #endif
 
 #ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+#import "GTLPlusConstants.h"
+
+#import "Functions.h"
+#import "NSObject+Extensions.h"
+#import "NSArray+Extensions.h"
+#import "NSCache+Extensions.h"
+#import "NSString+Extensions.h"
+#import "NSMutableString+Extensions.h"
+#import "UIView+Extensions.h"
+#import "NSDate+Extensions.h"
+#import "UIDevice+Extensions.h"
+#import "UIButton+Extensions.h"
+#import "UIColor+Extensions.h"
+#import "NSSortDescriptor+Extensions.h"
+#import "UIImage+Extensions.h"
+#import "NSDictionary+Extensions.h"
+#import "UIViewController+Extensions.h"
+#import "UIFont+Extensions.h"
+#import "NSURL+Extensions.h"
+#import "UIPopoverController+Extensions.h"
+
+#import "Setup.h"
+
+#define ls(x)
+#define german()
+
+// http://www.iphonesdkarticles.com/2008/11/localizing-iphone-apps.html
+#define degreesToRadian(x) (M_PI * (x) / 180.0)
+#define radiansToDegrees(x) (x * 180.0 / M_PI)
+#define pf() NSLog(@"%s", __PRETTY_FUNCTION__)
+
 #endif

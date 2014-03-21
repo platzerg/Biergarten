@@ -17,7 +17,7 @@
 #import <TMAPIClient.h>
 #import <DropboxSDK/DropboxSDK.h>
 
-@interface PWAppDelegate () <GPPDeepLinkDelegate, DBSessionDelegate, DBNetworkRequestDelegate>
+@interface PWAppDelegate () <DBSessionDelegate, DBNetworkRequestDelegate>
 
 @end
 
@@ -101,11 +101,11 @@
 -(void) initGooglePlus
 {
     // Set app's client ID for |GPPSignIn| and |GPPShare|.
-    [GPPSignIn sharedInstance].clientID = kClientID;
+    //[GPPSignIn sharedInstance].clientID = kClientID;
     
     // Read Google+ deep-link data.
-    [GPPDeepLink setDelegate:self];
-    [GPPDeepLink readDeepLinkAfterInstall];
+    //[GPPDeepLink setDelegate:self];
+    //[GPPDeepLink readDeepLinkAfterInstall];
 }
 
 -(void) initTumblr
@@ -207,9 +207,7 @@
     }
     else if([@"com.platzerworld.Biergarten" isEqualToString:scheme])
     {
-        return [GPPURLHandler handleURL:url
-                      sourceApplication:sourceApplication
-                             annotation:annotation];
+        //return [GPPURLHandler handleURL:url sourceApplication:sourceApplication annotation:annotation];
         return YES;
     }
     else if([@"db-70597bjsoly1oxg" isEqualToString:scheme])
@@ -310,6 +308,7 @@
 
 #pragma mark - GPPDeepLinkDelegate
 
+/*
 - (void)didReceiveDeepLink:(GPPDeepLink *)deepLink {
     // An example to handle the deep link data.
     UIAlertView *alert = [[UIAlertView alloc]
@@ -320,7 +319,7 @@
                           otherButtonTitles:nil];
     [alert show];
 }
-
+*/
 
 #pragma mark -
 #pragma mark DBSessionDelegate methods

@@ -11,7 +11,6 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <BZFoursquare.h>
 #import <Foursquare2.h>
-#import <GooglePlus/GooglePlus.h>
 
 @class GTMOAuth2Authentication;
 
