@@ -42,8 +42,6 @@
     [self initGooglePlus];
     [self initDropbox];
     
-    PWDataManager *sharedDataManager = [PWDataManager sharedManager];
-    
     BiergartenGAEFetcher *myBiergartenFetcher = [[BiergartenGAEFetcher alloc] init];
     [myBiergartenFetcher loadBiergaerten];
     
