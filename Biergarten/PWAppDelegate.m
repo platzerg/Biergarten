@@ -16,6 +16,8 @@
 #import <InstagramKit.h>
 #import <TMAPIClient.h>
 #import <DropboxSDK/DropboxSDK.h>
+#import "BiergartenGAEFetcher.h"
+#import "PWDataManager.h"
 
 @interface PWAppDelegate () <DBSessionDelegate, DBNetworkRequestDelegate>
 
@@ -39,6 +41,11 @@
     [self initTumblr];
     [self initGooglePlus];
     [self initDropbox];
+    
+    PWDataManager *sharedDataManager = [PWDataManager sharedManager];
+    
+    BiergartenGAEFetcher *myBiergartenFetcher = [[BiergartenGAEFetcher alloc] init];
+    [myBiergartenFetcher loadBiergaerten];
     
     return YES;
 }
