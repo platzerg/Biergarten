@@ -28,25 +28,20 @@
 
 #import <Foundation/Foundation.h>
 
-#if GTL_BUILT_AS_FRAMEWORK
-#import "GTL/GTLDefines.h"
-#else
-#import "GTLDefines.h"
-#endif
 
 // Authorization scope
 // Know who you are on Google
-GTL_EXTERN NSString * const kGTLAuthScopePlusMe;  // "https://www.googleapis.com/auth/plus.me"
+NSString * const kGTLAuthScopePlusMe;  // "https://www.googleapis.com/auth/plus.me"
 
 // Collection
-GTL_EXTERN NSString * const kGTLPlusCollectionPlusoners;  // "plusoners"
-GTL_EXTERN NSString * const kGTLPlusCollectionPublic;     // "public"
-GTL_EXTERN NSString * const kGTLPlusCollectionResharers;  // "resharers"
+NSString * const kGTLPlusCollectionPlusoners;  // "plusoners"
+NSString * const kGTLPlusCollectionPublic;     // "public"
+NSString * const kGTLPlusCollectionResharers;  // "resharers"
 
 // OrderBy
-GTL_EXTERN NSString * const kGTLPlusOrderByBest;    // "best"
-GTL_EXTERN NSString * const kGTLPlusOrderByRecent;  // "recent"
+NSString * const kGTLPlusOrderByBest;    // "best"
+NSString * const kGTLPlusOrderByRecent;  // "recent"
 
 // SortOrder
-GTL_EXTERN NSString * const kGTLPlusSortOrderAscending;   // "ascending"
-GTL_EXTERN NSString * const kGTLPlusSortOrderDescending;  // "descending"
+NSString * const kGTLPlusSortOrderAscending;   // "ascending"
+NSString * const kGTLPlusSortOrderDescending;  // "descending"

@@ -7,41 +7,15 @@
 //
 
 #import "BiergartenGAEFetcher.h"
-#import "BiergartenDataHelper.h"
 #import "Biergarten.h"
 #import "Adresse.h"
 #import "Getraenke.h"
 #import "Speisen.h"
-#import "JSMCoreDataHelper.h"
+#import "PWDataManager.h"
 #import "Constants.h"
 
 #define kBiergartenURL [NSURL URLWithString: @"http://biergartenservice.appspot.com/platzerworld/biergarten/holebiergarten"] //
 #define kBiergartenQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
-
-
-@interface NSDictionary(JSONCategories)
-+(NSDictionary*)dictionaryWithContentsOfJSONURLString:(NSString*)urlAddress;
--(NSData*)toJSON;
-@end
-
-@implementation NSDictionary(JSONCategories)
-+(NSDictionary*)dictionaryWithContentsOfJSONURLString:(NSString*)urlAddress
-{
-    NSData* data = [NSData dataWithContentsOfURL: [NSURL URLWithString: urlAddress] ];
-    __autoreleasing NSError* error = nil;
-    id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    if (error != nil) return nil;
-    return result;
-}
-
--(NSData*)toJSON
-{
-    NSError* error = nil;
-    id result = [NSJSONSerialization dataWithJSONObject:self options:kNilOptions error:&error];
-    if (error != nil) return nil;
-    return result;
-}
-@end
 
 
 @implementation BiergartenGAEFetcher
@@ -58,12 +32,15 @@
 - (void)fetchedData:(NSData *)responseData {
     //parse out the json data
     NSError* error;
-    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:responseData //1
-                                                         options:kNilOptions
-                                                           error:&error];
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:responseData  options:kNilOptions error:&error];
     
+    NSArray *items1 = [[PWDataManager sharedManager] fetchEntitiesForClass:[Biergarten class] withPredicate:nil];
     
-    NSManagedObjectContext *context1 = [JSMCoreDataHelper managedObjectContext];
+    for (Biergarten *biergarten in items1) {
+        NSLog(@"Biergarten mit Namen %@ und adresse %@ Biermarke %@ und Speise %@ gefunden",
+              biergarten.name, biergarten.adresse.strasse, biergarten.getraenke.biermarke, biergarten.speisen.lieblingsgericht);
+    }
+
 
     
     NSArray* latestLoans = [json objectForKey:cAttributeBiergartenliste]; //2
@@ -97,8 +74,10 @@
         NSString* speisenkommentar = [loan objectForKey:cAttributeSpeisenkommentar];
         NSString* favorit = [loan objectForKey:cAttributeFavorit];
         
-        Biergarten *biergarten = [JSMCoreDataHelper insertManagedObjectOfClass:[Biergarten class] inManagedObjectContext:context1];
-    
+        // [[PWDataManager sharedManager] managedObjectContext] ;
+     
+        Biergarten *biergarten = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass ([Biergarten class]) inManagedObjectContext:[[PWDataManager sharedManager] managedObjectContext]];
+        
         biergarten.biergartenid =  [NSNumber numberWithInt:[biergartenId integerValue]];
         biergarten.name = name;
         biergarten.telefon = telefon;
@@ -109,8 +88,7 @@
         biergarten.favorit = 0;
         
         
-        
-        Adresse *adresse = [BiergartenDataHelper insertManagedObjectOfClass:[Adresse class ]inManagedObjectContext:context1];
+        Adresse *adresse = [[PWDataManager sharedManager] insertManagedObjectOfClass:[Adresse class ]];
         adresse.strasse = strasse;
         adresse.plz = plz;
         adresse.ort = ort;
@@ -118,12 +96,12 @@
         adresse.longitude =  [NSNumber numberWithFloat:[[longitude stringByReplacingOccurrencesOfString:@"," withString:@"."]  floatValue]];
         NSLog(@"Adresse: %@", adresse);
         
-        Getraenke *getraenke = [BiergartenDataHelper insertManagedObjectOfClass:[Getraenke class ]inManagedObjectContext:context1];
+        Getraenke *getraenke = [[PWDataManager sharedManager] insertManagedObjectOfClass:[Getraenke class ]];
         getraenke.biermarke = biermarke;
         getraenke.mass = mass;
         getraenke.apfelschorle = apfelschorle;
         
-        Speisen *speisen = [BiergartenDataHelper insertManagedObjectOfClass:[Speisen class ]inManagedObjectContext:context1];
+        Speisen *speisen = [[PWDataManager sharedManager] insertManagedObjectOfClass:[Speisen class ]];
         speisen.lieblingsgericht = lieblingsgericht;
         speisen.riesenbreze = riesenbreze;
         speisen.obazda = obazda;
@@ -133,47 +111,9 @@
         biergarten.speisen = speisen;
         biergarten.getraenke = getraenke;
         
-        [JSMCoreDataHelper saveManagedObjectContext:context1];
-    }
-       
+        [[PWDataManager sharedManager] saveManagedObjectContext];    }
     
-    
-
-    
-    /*    
-    // 3) Set the label appropriately
-    NSString *str1 = [NSString stringWithFormat:@"Name: %@ PLZ: %@ Strasse: %@ ",
-                         name,
-                         plz,
-                         strasse
-                         ];
-    NSLog(@"Biergaerten String 1: %@", str1);
-    
-    //build an info object and convert to json
-    NSDictionary* info = [NSDictionary dictionaryWithObjectsAndKeys:
-                          [loan objectForKey:cAttributeName], cAttributeName,
-                          [loan objectForKey:cAttributeStrasse], cAttributeStrasse,
-                          [loan objectForKey:cAttributeDesc], cAttributeDesc,
-                          nil];
-    
-    //convert object to data
-    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:info
-                                                       options:NSJSONWritingPrettyPrinted
-                                                         error:&error];
-    
-    //print out the data contents
-    NSString *str2 = [[NSString alloc] initWithData:jsonData
-                                             encoding:NSUTF8StringEncoding];
-    NSLog(@"Biergaerten String 2: %@", str2);
-    
-    */
-    // Override point for customization after application launch.
-        
-    
-    
-   
-    
-    NSArray *items = [JSMCoreDataHelper fetchEntitiesForClass:[Biergarten class] withPredicate:nil inManagesObjectContext:context1];
+    NSArray *items = [[PWDataManager sharedManager] fetchEntitiesForClass:[Biergarten class] withPredicate:nil];
     
     for (Biergarten *biergarten in items) {
         NSLog(@"Biergarten mit Namen %@ und adresse %@ Biermarke %@ und Speise %@ gefunden",
@@ -188,28 +128,23 @@
 {
     // Override point for customization after application launch.
     
-    Biergarten *biergarten = [BiergartenDataHelper insertManagedObjectOfClass:[Biergarten class ]inManagedObjectContext:
-                              [[BiergartenDataHelper sharedInstance]managedObjectContext]];
+    Biergarten *biergarten = [[PWDataManager sharedManager] insertManagedObjectOfClass:[Biergarten class ]];
     biergarten.name = @"Aumeister";
     
-    Adresse *adresse = [BiergartenDataHelper insertManagedObjectOfClass:[Adresse class ]inManagedObjectContext:
-                        [[BiergartenDataHelper sharedInstance]managedObjectContext]];
+    Adresse *adresse = [[PWDataManager sharedManager] insertManagedObjectOfClass:[Adresse class ]];
     adresse.strasse = @"Aumeisterweg 3";
     
-    Getraenke *getraenke = [BiergartenDataHelper insertManagedObjectOfClass:[Getraenke class ]inManagedObjectContext:
-                            [[BiergartenDataHelper sharedInstance]managedObjectContext]];
+    Getraenke *getraenke =  [[PWDataManager sharedManager] insertManagedObjectOfClass:[Getraenke class ]];
     getraenke.biermarke = @"Hofbräu";
     
-    Speisen *speisen = [BiergartenDataHelper insertManagedObjectOfClass:[Speisen class ]inManagedObjectContext:
-                        [[BiergartenDataHelper sharedInstance]managedObjectContext]];
+    Speisen *speisen = [[PWDataManager sharedManager] insertManagedObjectOfClass:[Speisen class ]];
     speisen.lieblingsgericht = @"Steckerl-Fisch";
     
     biergarten.adresse = adresse;
     biergarten.speisen = speisen;
     biergarten.getraenke = getraenke;
     
-    [BiergartenDataHelper saveManagedObjectContext:
-     [[BiergartenDataHelper sharedInstance]managedObjectContext]];
+    [[PWDataManager sharedManager] saveManagedObjectContext];
     
     /*
      Person *person = [JSMCoreDataHelper insertManagedObjectOfClass:[Person class] inManagedObjectContext:context];
@@ -225,12 +160,41 @@
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name CONTAINS[c] %@", @"a"];
     
-    NSArray *items = [BiergartenDataHelper fetchEntitiesForClass:[Biergarten class] withPredicate:predicate inManagesObjectContext:
-                      [[BiergartenDataHelper sharedInstance]managedObjectContext]];
+    NSArray *items = [[PWDataManager sharedManager] fetchEntitiesForClass:[Biergarten class] withPredicate:nil];
+
     
     for (Biergarten *biergarten in items) {
         NSLog(@"Biergarten mit Namen %@ und adresse %@ gefunden", biergarten.name, biergarten.desclong);
     }
+    
+    /*
+    NSManagedObjectContext *context = [self managedObjectContext];
+    Biergarten *biergarten = [NSEntityDescription insertNewObjectForEntityForName:@"Biergarten" inManagedObjectContext:context];
+    biergarten.name = @"Aumeister";
+    
+    
+    Adresse *adresse = [NSEntityDescription insertNewObjectForEntityForName:@"Adresse" inManagedObjectContext:context];
+    adresse.latitude = @3;
+    biergarten.adresse = adresse;
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    // Test listing all FailedBankInfos from the store
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Biergarten" inManagedObjectContext:context];
+    
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (Biergarten *biergarten in fetchedObjects) {
+        NSLog(@"Name: %@", biergarten.name);
+        
+        Adresse *adressen = biergarten.adresse;
+        NSLog(@"Latitude: %@", adressen.latitude);
+    }
+     */
 
 }
 

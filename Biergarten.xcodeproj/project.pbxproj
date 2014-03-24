@@ -135,7 +135,6 @@
 		0BF7A8C918DCB71500BEE29C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A8C818DCB71500BEE29C /* Constants.m */; };
 		0BF7A8CC18DCB96300BEE29C /* BiergartenGAEFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A8CB18DCB96300BEE29C /* BiergartenGAEFetcher.m */; };
 		0BF7A8CF18DCB97A00BEE29C /* BiergartenDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A8CE18DCB97A00BEE29C /* BiergartenDataHelper.m */; };
-		0BF7A8D218DCB9A100BEE29C /* JSMCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A8D118DCB9A100BEE29C /* JSMCoreDataHelper.m */; };
 		0BF7A8D518DCBB6200BEE29C /* PWDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A8D418DCBB6200BEE29C /* PWDataManager.m */; };
 		0BF9ABE418E01705008E75B0 /* Biergarten.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BF9ABE218E01705008E75B0 /* Biergarten.xcdatamodeld */; };
 		0BF9ABE618E01A6A008E75B0 /* biergarten.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0BF9ABE518E01A6A008E75B0 /* biergarten.sqlite */; };
@@ -361,8 +360,6 @@
 		0BF7A8CB18DCB96300BEE29C /* BiergartenGAEFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiergartenGAEFetcher.m; sourceTree = "<group>"; };
 		0BF7A8CD18DCB97A00BEE29C /* BiergartenDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiergartenDataHelper.h; sourceTree = "<group>"; };
 		0BF7A8CE18DCB97A00BEE29C /* BiergartenDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiergartenDataHelper.m; sourceTree = "<group>"; };
-		0BF7A8D018DCB9A100BEE29C /* JSMCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMCoreDataHelper.h; sourceTree = "<group>"; };
-		0BF7A8D118DCB9A100BEE29C /* JSMCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMCoreDataHelper.m; sourceTree = "<group>"; };
 		0BF7A8D318DCBB6200BEE29C /* PWDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWDataManager.h; sourceTree = "<group>"; };
 		0BF7A8D418DCBB6200BEE29C /* PWDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWDataManager.m; sourceTree = "<group>"; };
 		0BF9ABE318E01705008E75B0 /* Biergarten.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Biergarten.xcdatamodel; sourceTree = "<group>"; };
@@ -899,8 +896,6 @@
 				0BF9ABE918E01D6A008E75B0 /* Adresse.h */,
 				0BF9ABEA18E01D6A008E75B0 /* Adresse.m */,
 				0BF9ABE518E01A6A008E75B0 /* biergarten.sqlite */,
-				0BF7A8D018DCB9A100BEE29C /* JSMCoreDataHelper.h */,
-				0BF7A8D118DCB9A100BEE29C /* JSMCoreDataHelper.m */,
 				0BF7A8CD18DCB97A00BEE29C /* BiergartenDataHelper.h */,
 				0BF7A8CE18DCB97A00BEE29C /* BiergartenDataHelper.m */,
 				0BF7A8CA18DCB96300BEE29C /* BiergartenGAEFetcher.h */,
@@ -1107,7 +1102,6 @@
 				0BF7A86A18DC8F8000BEE29C /* NSCache+Extensions.m in Sources */,
 				0BF9ABEE18E01D6B008E75B0 /* Biergarten.m in Sources */,
 				0B5610CB18D1E09700F1A4DB /* FSConverter.m in Sources */,
-				0BF7A8D218DCB9A100BEE29C /* JSMCoreDataHelper.m in Sources */,
 				0BF7A86B18DC8F8000BEE29C /* NSDate+Extensions.m in Sources */,
 				0B5610E918D1E0E700F1A4DB /* PWLocationManager.m in Sources */,
 				0B5610B118D1E06300F1A4DB /* PWFBFriedPickerViewController.m in Sources */,

@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 
 @interface BiergartenTests : XCTestCase
-
+@property (nonatomic, retain) UIViewController* vc;
 @end
 
 @implementation BiergartenTests
@@ -28,7 +28,10 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertNotNil(@1, @"foo");
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    self.vc = [storyboard instantiateViewControllerWithIdentifier:@"mapviewcontroller"];
+    [self.vc performSelectorOnMainThread:@selector(viewDidLoad) withObject:nil waitUntilDone:YES];
 }
 
 @end

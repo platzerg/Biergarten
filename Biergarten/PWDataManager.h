@@ -20,4 +20,10 @@
 
 + (id)sharedManager;
 
+- (id) insertManagedObjectOfClass: (Class) aClass;
+
+- (BOOL) saveManagedObjectContext;
+
+- (NSArray*) fetchEntitiesForClass: (Class) aClass withPredicate: (NSPredicate*) predicate;
+
 @end

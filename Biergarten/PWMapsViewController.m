@@ -8,6 +8,10 @@
 
 #import "PWMapsViewController.h"
 #import "PWManager.h"
+#import "Biergarten.h"
+#import "Adresse.h"
+#import "Getraenke.h"
+#import "Speisen.h"
 
 @interface PWMapsViewController ()
 @end
@@ -68,7 +72,16 @@
     NSArray *data = [root objectForKey:@"biergartenListe"];
     
     PWBiergarten* biergarten = nil;
-    
+    /*
+    NSArray *items = [[PWDataManager sharedManager] fetchEntitiesForClass:[Biergarten class] withPredicate:nil];
+    for (Biergarten *biergartenItem in items)
+    {
+        NSLog(@"biergartenNSArraAusJson %@", biergartenItem);
+        PWMyLocation *annotation = [[PWMyLocation alloc] initWithName:biergartenItem.name
+              address:biergartenItem.adresse.strasse
+              coordinate:CLLocationCoordinate2DMake([biergartenItem.adresse.latitude doubleValue], [biergartenItem.adresse.longitude doubleValue])] ;
+    }
+    */
     for (NSArray *row in data) {
         // 48.179712;
         // 11.592202;

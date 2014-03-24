@@ -20,6 +20,9 @@
 
 // -------------------------------------------------------------------------------------------------
 
++(NSDictionary*)dictionaryWithContentsOfJSONURLString:(NSString*)urlAddress;
+-(NSData*)toJSON;
+
 - (NSString *) stringForKey:(NSString *) sKey;
 - (NSString *) textForKey:(NSString *) sKey;
 - (NSArray *) arrayForKey:(NSString *) sKey

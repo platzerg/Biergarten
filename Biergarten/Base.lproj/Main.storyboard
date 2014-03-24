@@ -107,7 +107,7 @@
         <!--Maps View Controller - Maps-->
         <scene sceneID="SBz-E8-bxq">
             <objects>
-                <viewController title="Maps" id="GAh-mw-9gw" customClass="PWMapsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapviewcontroller" title="Maps" id="GAh-mw-9gw" customClass="PWMapsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v9x-5E-G6h"/>
                         <viewControllerLayoutGuide type="bottom" id="kcC-9a-PGB"/>

@@ -30,32 +30,8 @@
 
 - (id)init {
     if (self = [super init]) {
-        NSManagedObjectContext *context = [self managedObjectContext];
-        Biergarten *biergarten = [NSEntityDescription insertNewObjectForEntityForName:@"Biergarten" inManagedObjectContext:context];
-        biergarten.name = @"Aumeister";
-        
-        
-        Adresse *adresse = [NSEntityDescription insertNewObjectForEntityForName:@"Adresse" inManagedObjectContext:context];
-        adresse.latitude = @3;
-        biergarten.adresse = adresse;
-        
-        NSError *error;
-        if (![context save:&error]) {
-            NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-        }
-        
-        // Test listing all FailedBankInfos from the store
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Biergarten" inManagedObjectContext:context];
-        
-        [fetchRequest setEntity:entity];
-        NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-        for (Biergarten *biergarten in fetchedObjects) {
-            NSLog(@"Name: %@", biergarten.name);
-            
-            Adresse *adressen = biergarten.adresse;
-            NSLog(@"Latitude: %@", adressen.latitude);
-        }
+        NSLog(@"Latitude: %s", __PRETTY_FUNCTION__);
+        [self managedObjectContext];
     }
     return self;
 }
@@ -165,6 +141,38 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+- (id) insertManagedObjectOfClass: (Class) aClass
+{
+    NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass (aClass) inManagedObjectContext:__managedObjectContext];
+    return managedObject;
+}
+
+- (BOOL) saveManagedObjectContext
+{
+    NSError *error;
+    if (! [__managedObjectContext save:&error] ) {
+        NSLog(@"Fehler: %@", error.localizedDescription);
+        return NO;
+    }
+    return YES;
+}
+
+- (NSArray*) fetchEntitiesForClass: (Class) aClass withPredicate: (NSPredicate*) predicate
+{
+    NSError *error;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:NSStringFromClass(aClass) inManagedObjectContext:__managedObjectContext];
+    fetchRequest.entity = entityDescription;
+    fetchRequest.predicate = predicate;
+    
+    NSArray *items = [__managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        NSLog(@"Fehler: %@", error.localizedDescription);
+        return nil;
+    }
+    return items;
 }
 
 @end
