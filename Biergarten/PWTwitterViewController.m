@@ -99,9 +99,6 @@
     NSLog(@"requestTwitterTokenDidFail");
 }
 
-
-
-
 /*
 - (BOOL) synchronousVerifyTwitterCredentials {
 	
