@@ -28,19 +28,32 @@
 }
 
 - (IBAction)doLoginTwitterClick:(UIButton *)sender {
+    [self doLoginTwitter];
+}
+
+- (BOOL) isTwitterLoginSucessful{
+    [self doLoginTwitter];
+    if(oAuth)
+    {
+        return true;
+    }
+    return false;
+}
+
+- (void)doLoginTwitter{
     NSLog(@"Twitter Login Button Pushed");
     
-     // #define kkDEConsumerKey = @"d3cODo8FMA45Har8aL3dg"
-     // #define kDEConsumerSecret @"2Dya3MD04xLAeAbNdutQgTVSvE1IsXrCTikJkYAgaI"
-     oAuth = [[OAuth alloc] initWithConsumerKey:@"d3cODo8FMA45Har8aL3dg" andConsumerSecret:@"2Dya3MD04xLAeAbNdutQgTVSvE1IsXrCTikJkYAgaI"];
-     oAuth.delegate = self;
+    // #define kkDEConsumerKey = @"d3cODo8FMA45Har8aL3dg"
+    // #define kDEConsumerSecret @"2Dya3MD04xLAeAbNdutQgTVSvE1IsXrCTikJkYAgaI"
+    oAuth = [[OAuth alloc] initWithConsumerKey:@"d3cODo8FMA45Har8aL3dg" andConsumerSecret:@"2Dya3MD04xLAeAbNdutQgTVSvE1IsXrCTikJkYAgaI"];
+    oAuth.delegate = self;
     
-     TwitterDialog *td = [[TwitterDialog alloc] init];
-     td.twitterOAuth = oAuth;
-     td.delegate = self;
-     td.logindelegate = self;
-     
-     [td show];
+    TwitterDialog *td = [[TwitterDialog alloc] init];
+    td.twitterOAuth = oAuth;
+    td.delegate = self;
+    td.logindelegate = self;
+    
+    [td show];
     
 }
 
@@ -68,13 +81,13 @@
 }
 
 - (void) authorizeTwitterTokenDidSucceed:(OAuth *)oaAuth{
-    //oAuth = oaAuth;
+    oAuth = oaAuth;
     //[self synchronousVerifyTwitterCredentials];
     NSLog(@"authorizeTwitterTokenDidSucceed");
 }
 
 - (void) requestTwitterTokenDidSucceed:(OAuth *)oaAuth{
-    //oAuth = oaAuth;
+    oAuth = oaAuth;
     NSLog(@"requestTwitterTokenDidSucceed");
 }
 

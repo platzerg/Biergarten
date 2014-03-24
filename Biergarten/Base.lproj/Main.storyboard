@@ -107,7 +107,7 @@
         <!--Maps View Controller - Maps-->
         <scene sceneID="SBz-E8-bxq">
             <objects>
-                <viewController storyboardIdentifier="mapviewcontroller" title="Maps" id="GAh-mw-9gw" customClass="PWMapsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PWMapsViewController" title="Maps" id="GAh-mw-9gw" customClass="PWMapsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v9x-5E-G6h"/>
                         <viewControllerLayoutGuide type="bottom" id="kcC-9a-PGB"/>
@@ -991,7 +991,7 @@
         <!--Twitter View Controller - Twitter-->
         <scene sceneID="gzg-kt-drd">
             <objects>
-                <viewController id="WAg-tV-JFG" customClass="PWTwitterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PWTwitterViewController" id="WAg-tV-JFG" customClass="PWTwitterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YWU-ja-a0J"/>
                         <viewControllerLayoutGuide type="bottom" id="v0M-8v-Sfq"/>
