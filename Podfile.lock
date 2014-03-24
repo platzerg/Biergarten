@@ -20,7 +20,7 @@ PODS:
     - AFNetworking/NSURLSession
   - BiergartenFetcher (0.0.1):
     - Reachability
-  - Dropbox-iOS-SDK (1.3.9)
+  - Dropbox-iOS-SDK (1.3.10)
   - Facebook-iOS-SDK (3.13.0)
   - FlickrKit (1.0.2)
   - Foursquare-API-v2 (1.4.4)
@@ -228,7 +228,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 0121f4b69be3fa58d1ab317866e036e12ac9651d
   BiergartenFetcher: 7dbc077a44d8646e68787586b1596791f8e3d87c
-  Dropbox-iOS-SDK: 1a8850056b1bd54bc023bd268e1e6f4d6ee9d7a5
+  Dropbox-iOS-SDK: c3f646025b276846a5c481621753d7819abc1c36
   Facebook-iOS-SDK: 5788541337dc88265bc940cb5ffb05915f9b64e3
   FlickrKit: b096e8995b2e830c302f4a2c03e87242d5f9f63a
   Foursquare-API-v2: cb5609c318903a4d80a58d7d476298362e889a9b

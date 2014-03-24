@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SGTouchPresenter.h"
+
 #import "PWAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([PWAppDelegate class]));
+        //return UIApplicationMain(argc, argv, nil, NSStringFromClass([PWAppDelegate class]));
+        
+        return UIApplicationMain(argc, argv, NSStringFromClass([SGTouchPresenter class]), NSStringFromClass([PWAppDelegate class]));
     }
 }

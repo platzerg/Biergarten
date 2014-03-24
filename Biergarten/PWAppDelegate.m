@@ -18,6 +18,7 @@
 #import <DropboxSDK/DropboxSDK.h>
 #import "BiergartenGAEFetcher.h"
 #import "PWDataManager.h"
+#import "SGTouchPresenter.h"
 
 @interface PWAppDelegate () <DBSessionDelegate, DBNetworkRequestDelegate>
 
@@ -31,6 +32,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    Setup *oSetup = [Setup sharedSetup];
+    if (true) {
+        //oSetup.enablePresenter;
+        [SGTouchPresenter showTouchesWithColor:oSetup.tintColor alpha:0.7];
+    }
+    
      
     [TSMessage setDefaultViewController: self.window.rootViewController];
     [PWFBFriedPickerViewController class];

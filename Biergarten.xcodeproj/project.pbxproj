@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2D52C218E09F7E007147B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2D52C118E09F7E007147B0 /* QuartzCore.framework */; };
+		0B2D52C618E09FAD007147B0 /* SGTouchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D52C518E09FAD007147B0 /* SGTouchPresenter.m */; };
 		0B49DF8718D44D6E00CA282A /* PWYoutubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B49DF8618D44D6E00CA282A /* PWYoutubeViewController.m */; };
 		0B55D39618D358E000F3D66B /* Flickr.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B55D39518D358E000F3D66B /* Flickr.png */; };
 		0B55D3A218D3616100F3D66B /* DBPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B55D3A018D3616100F3D66B /* DBPhotoViewController.m */; };
@@ -156,6 +158,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B2D52C118E09F7E007147B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0B2D52C418E09FAD007147B0 /* SGTouchPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTouchPresenter.h; sourceTree = "<group>"; };
+		0B2D52C518E09FAD007147B0 /* SGTouchPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTouchPresenter.m; sourceTree = "<group>"; };
 		0B49DF8518D44D6E00CA282A /* PWYoutubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWYoutubeViewController.h; sourceTree = "<group>"; };
 		0B49DF8618D44D6E00CA282A /* PWYoutubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWYoutubeViewController.m; sourceTree = "<group>"; };
 		0B55D39518D358E000F3D66B /* Flickr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flickr.png; sourceTree = "<group>"; };
@@ -381,6 +386,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2D52C218E09F7E007147B0 /* QuartzCore.framework in Frameworks */,
 				0BF7A83918DC8D4D00BEE29C /* CoreText.framework in Frameworks */,
 				0BF7A83718DC8D3F00BEE29C /* CoreData.framework in Frameworks */,
 				0B56101318D1DD7300F1A4DB /* CoreGraphics.framework in Frameworks */,
@@ -403,6 +409,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2D52C318E09F96007147B0 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0B2D52C418E09FAD007147B0 /* SGTouchPresenter.h */,
+				0B2D52C518E09FAD007147B0 /* SGTouchPresenter.m */,
+				0B56101F18D1DD7300F1A4DB /* PWAppDelegate.h */,
+				0B56102018D1DD7300F1A4DB /* PWAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
 		0B49DF8418D44D5D00CA282A /* Youtube */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +487,7 @@
 		0B56100F18D1DD7300F1A4DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B2D52C118E09F7E007147B0 /* QuartzCore.framework */,
 				0BF7A83818DC8D4D00BEE29C /* CoreText.framework */,
 				0BF7A83618DC8D3F00BEE29C /* CoreData.framework */,
 				0B56101018D1DD7300F1A4DB /* Foundation.framework */,
@@ -484,6 +502,7 @@
 		0B56101618D1DD7300F1A4DB /* Biergarten */ = {
 			isa = PBXGroup;
 			children = (
+				0B2D52C318E09F96007147B0 /* AppDelegate */,
 				0BF7A8B818DCB69500BEE29C /* DataModel */,
 				0BF7A7EA18DC8B8F00BEE29C /* Extensions */,
 				0BF7A7E618DC896E00BEE29C /* Setup */,
@@ -507,8 +526,6 @@
 				0B56104F18D1DFBA00F1A4DB /* Foursquare */,
 				0B56104618D1DF6C00F1A4DB /* Flickr */,
 				0B56104518D1DD7F00F1A4DB /* Storyboard */,
-				0B56101F18D1DD7300F1A4DB /* PWAppDelegate.h */,
-				0B56102018D1DD7300F1A4DB /* PWAppDelegate.m */,
 				0B56102818D1DD7300F1A4DB /* Images.xcassets */,
 				0B56101718D1DD7300F1A4DB /* Supporting Files */,
 			);
@@ -1090,6 +1107,7 @@
 				0B56110C18D1F0C500F1A4DB /* IKMediaCell.m in Sources */,
 				0BF9ABE418E01705008E75B0 /* Biergarten.xcdatamodeld in Sources */,
 				0B5610B018D1E06300F1A4DB /* PWFBPlacePickerViewController.m in Sources */,
+				0B2D52C618E09FAD007147B0 /* SGTouchPresenter.m in Sources */,
 				0B5610CA18D1E09700F1A4DB /* FSVenue.m in Sources */,
 				0B56111618D1FA8900F1A4DB /* PWTumblrViewController.m in Sources */,
 				0BF7A87618DC8F8000BEE29C /* UIImage+Extensions.m in Sources */,
