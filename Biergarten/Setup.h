@@ -46,6 +46,7 @@
 
 + (Setup *) sharedSetup;
 - (void) saveToUserDefaults;
+- (void) loadFromUserDefaults;
 - (void) loadFont;
 
 // -------------------------------------------------------------------------------------------------

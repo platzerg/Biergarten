@@ -116,7 +116,7 @@
    self.enableLeftMenu = false;
    self.enablePresenter = false;
    
-   // [self loadFromUserDefaults];
+    [self loadFromUserDefaults];
    [self loadFont];
    
    return self;

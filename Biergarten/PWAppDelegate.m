@@ -33,7 +33,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     Setup *oSetup = [Setup sharedSetup];
-    if (true) {
+    if (oSetup.enablePresenter) {
         //oSetup.enablePresenter;
         [SGTouchPresenter showTouchesWithColor:oSetup.tintColor alpha:0.7];
     }

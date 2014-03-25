@@ -1,3 +1,9 @@
+### Implicit target definition :-/
+xcodeproj "Biergarten.xcodeproj"
+####
+
+workspace 'Biergarten.xcworkspace'
+
 platform :ios, '7.0'
 pod 'AFNetworking'
 pod 'Mantle'
@@ -22,5 +28,7 @@ pod 'Pinterest-iOS'
 pod 'InstagramKit'
 pod 'TMTumblrSDK'
 pod 'MBProgressHUD'
+
 pod 'BiergartenFetcher', :path => '/Users/platzerworld/cocoapodsrepo/BiergartenFetcher/0.0.1'
+#pod 'unoffical-twitter-sdk', :path => '/Users/platzerworld/cocoapodsrepo/unoffical-twitter-sdk/0.0.1'
 #pod 'google-plus-ios-sdk', :path => '/Users/platzerworld/cocoapodsrepo/google-plus-ios-sdk/1.5.0'

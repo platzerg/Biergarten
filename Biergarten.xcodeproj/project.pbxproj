@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B2D52C218E09F7E007147B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2D52C118E09F7E007147B0 /* QuartzCore.framework */; };
 		0B2D52C618E09FAD007147B0 /* SGTouchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D52C518E09FAD007147B0 /* SGTouchPresenter.m */; };
+		0B2D52D318E0B56F007147B0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B2D52D218E0B56F007147B0 /* Settings.bundle */; };
 		0B49DF8718D44D6E00CA282A /* PWYoutubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B49DF8618D44D6E00CA282A /* PWYoutubeViewController.m */; };
 		0B55D39618D358E000F3D66B /* Flickr.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B55D39518D358E000F3D66B /* Flickr.png */; };
 		0B55D3A218D3616100F3D66B /* DBPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B55D3A018D3616100F3D66B /* DBPhotoViewController.m */; };
@@ -106,6 +107,7 @@
 		0B56111B18D1FB2300F1A4DB /* TMAppClientExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B56111A18D1FB2300F1A4DB /* TMAppClientExampleController.m */; };
 		0B56111E18D2012500F1A4DB /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B56111D18D2012500F1A4DB /* blue.png */; };
 		0B56112218D20B4900F1A4DB /* PWGooglePlusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B56112118D20B4900F1A4DB /* PWGooglePlusViewController.m */; };
+		0B60767D18E17DFE00A04E5C /* ilike.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B60767F18E17DFE00A04E5C /* ilike.png */; };
 		0BF7A83718DC8D3F00BEE29C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF7A83618DC8D3F00BEE29C /* CoreData.framework */; };
 		0BF7A83918DC8D4D00BEE29C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF7A83818DC8D4D00BEE29C /* CoreText.framework */; };
 		0BF7A86718DC8F8000BEE29C /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A83E18DC8F8000BEE29C /* Functions.m */; };
@@ -161,6 +163,8 @@
 		0B2D52C118E09F7E007147B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0B2D52C418E09FAD007147B0 /* SGTouchPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTouchPresenter.h; sourceTree = "<group>"; };
 		0B2D52C518E09FAD007147B0 /* SGTouchPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTouchPresenter.m; sourceTree = "<group>"; };
+		0B2D52C918E0A9C4007147B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		0B2D52D218E0B56F007147B0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		0B49DF8518D44D6E00CA282A /* PWYoutubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWYoutubeViewController.h; sourceTree = "<group>"; };
 		0B49DF8618D44D6E00CA282A /* PWYoutubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWYoutubeViewController.m; sourceTree = "<group>"; };
 		0B55D39518D358E000F3D66B /* Flickr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flickr.png; sourceTree = "<group>"; };
@@ -307,6 +311,11 @@
 		0B56111D18D2012500F1A4DB /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		0B56112018D20B4900F1A4DB /* PWGooglePlusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWGooglePlusViewController.h; sourceTree = "<group>"; };
 		0B56112118D20B4900F1A4DB /* PWGooglePlusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWGooglePlusViewController.m; sourceTree = "<group>"; };
+		0B60767818E17C0200A04E5C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		0B60767918E17C0200A04E5C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0B60767A18E17C0200A04E5C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0B60767E18E17DFE00A04E5C /* de */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = de; path = de.lproj/ilike.png; sourceTree = "<group>"; };
+		0B60768018E17E0900A04E5C /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/ilike.png; sourceTree = "<group>"; };
 		0BF7A83618DC8D3F00BEE29C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0BF7A83818DC8D4D00BEE29C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		0BF7A83D18DC8F8000BEE29C /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
@@ -467,6 +476,7 @@
 		0B56100418D1DD7300F1A4DB = {
 			isa = PBXGroup;
 			children = (
+				0B2D52D218E0B56F007147B0 /* Settings.bundle */,
 				0B56101618D1DD7300F1A4DB /* Biergarten */,
 				0B56103518D1DD7300F1A4DB /* BiergartenTests */,
 				0B56100F18D1DD7300F1A4DB /* Frameworks */,
@@ -649,6 +659,7 @@
 		0B56105418D1DFE600F1A4DB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0B60767F18E17DFE00A04E5C /* ilike.png */,
 				0BF7A87F18DC900A00BEE29C /* Glyphs */,
 				0B55D39318D3580500F3D66B /* social */,
 				0B5610F718D1E5B600F1A4DB /* RemoveRegion.png */,
@@ -986,6 +997,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 0B56100418D1DD7300F1A4DB;
 			productRefGroup = 0B56100E18D1DD7300F1A4DB /* Products */;
@@ -1029,10 +1041,12 @@
 				0BF9ABE618E01A6A008E75B0 /* biergarten.sqlite in Resources */,
 				0B56108118D1E00900F1A4DB /* weather-shower.png in Resources */,
 				0B56107918D1E00900F1A4DB /* weather-moon.png in Resources */,
+				0B2D52D318E0B56F007147B0 /* Settings.bundle in Resources */,
 				0B56107C18D1E00900F1A4DB /* weather-rain-night@2x.png in Resources */,
 				0B56108E18D1E02A00F1A4DB /* Icon-72.png in Resources */,
 				0B56108418D1E00900F1A4DB /* weather-snow@2x.png in Resources */,
 				0B56108218D1E00900F1A4DB /* weather-shower@2x.png in Resources */,
+				0B60767D18E17DFE00A04E5C /* ilike.png in Resources */,
 				0B5610FA18D1E5B600F1A4DB /* RemoveRegion.png in Resources */,
 				0B56111818D1FB1400F1A4DB /* tumblr.png in Resources */,
 				0B56107518D1E00900F1A4DB /* weather-few.png in Resources */,
@@ -1075,7 +1089,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		92FC98DE58B843DD9B525956 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1089,8 +1102,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1206,6 +1219,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0B56101A18D1DD7300F1A4DB /* en */,
+				0B60767918E17C0200A04E5C /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1214,6 +1228,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				0B56102318D1DD7300F1A4DB /* Base */,
+				0B2D52C918E0A9C4007147B0 /* en */,
+				0B60767818E17C0200A04E5C /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1222,8 +1238,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				0B56103918D1DD7300F1A4DB /* en */,
+				0B60767A18E17C0200A04E5C /* de */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0B60767F18E17DFE00A04E5C /* ilike.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B60767E18E17DFE00A04E5C /* de */,
+				0B60768018E17E0900A04E5C /* en */,
+			);
+			name = ilike.png;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1231,6 +1257,7 @@
 /* Begin XCBuildConfiguration section */
 		0B56103D18D1DD7300F1A4DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1270,6 +1297,7 @@
 		};
 		0B56103E18D1DD7300F1A4DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1333,6 +1361,7 @@
 		};
 		0B56104318D1DD7300F1A4DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Biergarten.app/Biergarten";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1355,6 +1384,7 @@
 		};
 		0B56104418D1DD7300F1A4DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Biergarten.app/Biergarten";
 				FRAMEWORK_SEARCH_PATHS = (
