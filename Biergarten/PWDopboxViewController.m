@@ -83,7 +83,7 @@
 
 - (void) userAuthenticateCallback:(NSNotification *)notification {
 	NSURL *callbackURL = notification.object;
-    NSDictionary *result = FKQueryParamDictionaryFromURL(callbackURL);
+    NSDictionary *result = FKQueryParamDictionaryFromURL1(callbackURL);
     NSString *oauth_token = [result valueForKey:@"oauth_token"];
     NSString *auth_token_secret = [result valueForKey:@"oauth_token_secret"];
     NSString *state = [result valueForKey:@"state"];
@@ -92,14 +92,14 @@
     [self updateButtons];
 }
 
-NSDictionary *FKQueryParamDictionaryFromURL(NSURL *url) {
+NSDictionary *FKQueryParamDictionaryFromURL1(NSURL *url) {
     NSString *urlString = url.query;
-    NSDictionary *params = FKQueryParamDictionaryFromQueryString(urlString);
+    NSDictionary *params = FKQueryParamDictionaryFromQueryString1(urlString);
     return params;
 }
 
 
-NSDictionary *FKQueryParamDictionaryFromQueryString(NSString *queryString) {
+NSDictionary *FKQueryParamDictionaryFromQueryString1(NSString *queryString) {
     if (queryString.length < 1) {
         return nil;
     }
