@@ -7,11 +7,15 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <DropboxSDK/DropboxSDK.h>
+#import "PWAppDelegate.h"
 
 @interface BiergartenTests : XCTestCase
-@property (nonatomic, retain) UIViewController* mapviewcontroller;
-@property (nonatomic, retain) UIViewController* twitterViewController;
+@property (nonatomic, retain) UIViewController *mapviewcontroller;
+@property (nonatomic, retain) UIViewController *twitterViewController;
+@property (nonatomic, retain) UIViewController *dopboxViewController;
 
+@property (nonatomic, retain) PWAppDelegate *appDel;
 @end
 
 @implementation BiergartenTests
@@ -26,6 +30,9 @@
     storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     self.mapviewcontroller = [storyboard instantiateViewControllerWithIdentifier:@"PWMapsViewController"];
     self.twitterViewController = [storyboard instantiateViewControllerWithIdentifier:@"PWTwitterViewController"];
+    self.dopboxViewController = [storyboard instantiateViewControllerWithIdentifier:@"PWDopboxViewController"];
+    
+    self.appDel = (PWAppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)tearDown
@@ -47,7 +54,15 @@
     XCTAssertNotNil(@1, @"foo");
     
     [self.twitterViewController performSelectorOnMainThread:@selector(isTwitterLoginSucessful) withObject:nil waitUntilDone:YES];
-   
+}
+
+- (void)dropbox
+{
+    [[DBSession sharedSession] unlinkAll];
+    
+    [self.dopboxViewController performSelectorOnMainThread:@selector(didPressLink) withObject:nil waitUntilDone:YES];
+    BOOL *isLinked = [[DBSession sharedSession] isLinked];
+    XCTAssertTrue(isLinked, @"");
 }
 
 @end

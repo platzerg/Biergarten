@@ -166,6 +166,13 @@ PODS:
   - IOSLinkedInAPI (2.0.0):
     - AFNetworking (>= 2.0.0)
   - JXHTTP (1.0.0)
+  - Kiwi (2.2.4):
+    - Kiwi/SenTestingKit
+  - Kiwi/ARC (2.2.4)
+  - Kiwi/NonARC (2.2.4)
+  - Kiwi/SenTestingKit (2.2.4):
+    - Kiwi/ARC
+    - Kiwi/NonARC
   - LBBlurredImage (0.2.0)
   - Mantle (1.4.1):
     - Mantle/extobjc
@@ -212,6 +219,7 @@ DEPENDENCIES:
   - HexColors
   - InstagramKit
   - IOSLinkedInAPI
+  - Kiwi
   - LBBlurredImage
   - Mantle
   - MBProgressHUD
@@ -240,6 +248,7 @@ SPEC CHECKSUMS:
   InstagramKit: 0fd45aa4cfec4d4768960409d67910f88406dfcf
   IOSLinkedInAPI: 1c1b1bc3fcf21607225d2b9cd704bffab0abfbe1
   JXHTTP: 04f027e55c252d206cf3fcc2a2bde3914a35d842
+  Kiwi: d60d7498b640a16f58b01925fc3c8d7c4d809f66
   LBBlurredImage: 26bacd10063a6e886de6a374f4727c3cefb22fc2
   Mantle: 0714cdb2b8559d9e6c2410d6a8529e3307bff189
   MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622
