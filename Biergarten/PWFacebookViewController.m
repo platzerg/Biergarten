@@ -64,7 +64,7 @@
                             @"publish_stream",
                             nil];
     
-    loginView.readPermissions = @[@"basic_info", @"email", @"user_likes", @"user_birthday", @"user_location"];
+    loginView.readPermissions = @[@"public_profile", @"email", @"user_likes", @"user_birthday", @"user_location", @"user_friends"];
     
     // Align the button in the center horizontally
     
