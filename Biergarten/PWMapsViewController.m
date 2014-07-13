@@ -71,8 +71,6 @@
     NSDictionary *root = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
     NSArray *data = [root objectForKey:@"biergartenListe"];
     
-    PWBiergarten* biergarten = nil;
-    /*
     NSArray *items = [[PWDataManager sharedManager] fetchEntitiesForClass:[Biergarten class] withPredicate:nil];
     for (Biergarten *biergartenItem in items)
     {
@@ -80,12 +78,18 @@
         PWMyLocation *annotation = [[PWMyLocation alloc] initWithName:biergartenItem.name
               address:biergartenItem.adresse.strasse
               coordinate:CLLocationCoordinate2DMake([biergartenItem.adresse.latitude doubleValue], [biergartenItem.adresse.longitude doubleValue])] ;
+     
+        
+        
+     annotation.biergarten = biergarten;
+     [mapView addAnnotation:annotation];
     }
-    */
+   
+    /*
     for (NSArray *row in data) {
         // 48.179712;
         // 11.592202;
-        biergarten = [MTLJSONAdapter modelOfClass:[PWBiergarten class] fromJSONDictionary:row error:nil];
+        biergarten = [MTLJSONAdapter modelOfClass:[PWBiergarten class] fromJSONDictionary:row   error:nil];
         
         NSLog(@"biergartenNSArraAusJson %@", row);
         
@@ -103,6 +107,7 @@
         annotation.biergarten = biergarten;
         [mapView addAnnotation:annotation];
 	}
+     */
     
     /*
     // Default Location is Aumeister
