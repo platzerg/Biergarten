@@ -10,6 +10,8 @@
 
 enum SampleLocation {
     SampleLocationHOME,
+    CHAM,
+    BANGKOK,
     SampleLocationGPS,
 };
 
@@ -93,7 +95,7 @@ enum SampleLocation {
     // if the session is open, then load the data for our view controller
     if (FBSession.activeSession.isOpen) {
         // Default to Seattle, this method calls loadData
-        [self searchDisplayController:nil shouldReloadTableForSearchScope:SampleLocationHOME];
+        [self searchDisplayController:nil shouldReloadTableForSearchScope:BANGKOK];
     } else {
         // if the session isn't open, we open it here, which may cause UX to log in the user
         [FBSession openActiveSessionWithReadPermissions:nil
@@ -123,6 +125,15 @@ enum SampleLocation {
             self.locationCoordinate = CLLocationCoordinate2DMake(48.179796, 11.592184);
             [self loadData];
             break;
+        case BANGKOK:
+            self.locationCoordinate = CLLocationCoordinate2DMake(13.733272, 100.522218);
+            [self loadData];
+            break;
+        case CHAM:
+            self.locationCoordinate = CLLocationCoordinate2DMake(49.224217, 12.662951);
+            [self loadData];
+            break;
+            
         case SampleLocationGPS:
             self.locationManager = [[CLLocationManager alloc] init];
             self.locationManager.delegate = self;
