@@ -386,7 +386,7 @@ typedef enum {
    static NSDateFormatter *oDateFormatter = nil;
    
    if (!oDateFormatter) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
    }
@@ -436,7 +436,7 @@ typedef enum {
    static NSDateFormatter *oDateFormatter = nil;
    
    if (!oDateFormatter) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"d MMMM yyyy";
@@ -455,7 +455,7 @@ typedef enum {
    static NSDateFormatter *oDateFormatter = nil;
    
    if (!oDateFormatter) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"d MMM yyyy";
@@ -474,7 +474,7 @@ typedef enum {
    static NSDateFormatter *oDateFormatter = nil;
    
    if (!oDateFormatter) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"EEEE, d. MMMM";
@@ -513,7 +513,7 @@ typedef enum {
    static NSDateFormatter *oDateFormatter = nil;
    
    if (!oDateFormatter) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"EEEE, d.MM.";

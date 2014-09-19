@@ -1,34 +1,39 @@
 PODS:
-  - AFNetworking (2.2.1):
+  - AFNetworking (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
     - AFNetworking/UIKit
-  - AFNetworking/NSURLConnection (2.2.1):
+  - AFNetworking/NSURLConnection (2.4.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.2.1):
-    - AFNetworking/NSURLConnection
-  - AFNetworking/Reachability (2.2.1)
-  - AFNetworking/Security (2.2.1)
-  - AFNetworking/Serialization (2.2.1)
-  - AFNetworking/UIKit (2.2.1):
+  - AFNetworking/NSURLSession (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.4.1)
+  - AFNetworking/Security (2.4.1)
+  - AFNetworking/Serialization (2.4.1)
+  - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - BiergartenFetcher (0.0.1):
     - Reachability
-  - Dropbox-iOS-SDK (1.3.10)
-  - Facebook-iOS-SDK (3.13.0)
-  - FlickrKit (1.0.2)
-  - Foursquare-API-v2 (1.4.4)
+  - Bolts (1.1.2)
+  - Dropbox-iOS-SDK (1.3.11)
+  - Facebook-iOS-SDK (3.18.0):
+    - Bolts
+  - FlickrKit (1.0.4)
+  - Foursquare-API-v2 (1.4.5)
   - Foursquare-iOS-API (2.0)
-  - Google-API-Client (0.1.0):
+  - Google-API-Client (0.1.1):
     - Google-API-Client/AdSense
     - Google-API-Client/Analytics
     - Google-API-Client/AppState
+    - Google-API-Client/Bigquery
     - Google-API-Client/Blogger
     - Google-API-Client/Books
     - Google-API-Client/Calendar
@@ -40,11 +45,13 @@ PODS:
     - Google-API-Client/Drive
     - Google-API-Client/Groupssettings
     - Google-API-Client/Licensing
+    - Google-API-Client/MapsEngine
     - Google-API-Client/Mirror
     - Google-API-Client/Orkut
     - Google-API-Client/Plus
     - Google-API-Client/PlusDomains
     - Google-API-Client/Prediction
+    - Google-API-Client/QPXExpress
     - Google-API-Client/Spectrum
     - Google-API-Client/SQLAdmin
     - Google-API-Client/Storage
@@ -54,106 +61,118 @@ PODS:
     - Google-API-Client/YouTubeAnalytics
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/AdSense (0.1.0):
+  - Google-API-Client/AdSense (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Analytics (0.1.0):
+  - Google-API-Client/Analytics (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/AppState (0.1.0):
+  - Google-API-Client/AppState (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Blogger (0.1.0):
+  - Google-API-Client/Bigquery (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Books (0.1.0):
+  - Google-API-Client/Blogger (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Calendar (0.1.0):
+  - Google-API-Client/Books (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/CivicInfo (0.1.0):
+  - Google-API-Client/Calendar (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Common (0.1.0):
-    - gtm-oauth2
-    - GTMHTTPFetcher
-  - Google-API-Client/Compute (0.1.0):
+  - Google-API-Client/CivicInfo (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Discovery (0.1.0):
+  - Google-API-Client/Common (0.1.1):
+    - gtm-oauth2
+    - GTMHTTPFetcher
+  - Google-API-Client/Compute (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/DoubleClickBidManager (0.1.0):
+  - Google-API-Client/Discovery (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Drive (0.1.0):
+  - Google-API-Client/DoubleClickBidManager (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Groupssettings (0.1.0):
+  - Google-API-Client/Drive (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Licensing (0.1.0):
+  - Google-API-Client/Groupssettings (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Mirror (0.1.0):
+  - Google-API-Client/Licensing (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Orkut (0.1.0):
+  - Google-API-Client/MapsEngine (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Plus (0.1.0):
+  - Google-API-Client/Mirror (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/PlusDomains (0.1.0):
+  - Google-API-Client/Orkut (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Prediction (0.1.0):
+  - Google-API-Client/Plus (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Spectrum (0.1.0):
+  - Google-API-Client/PlusDomains (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/SQLAdmin (0.1.0):
+  - Google-API-Client/Prediction (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Storage (0.1.0):
+  - Google-API-Client/QPXExpress (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Tasks (0.1.0):
+  - Google-API-Client/Spectrum (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/Urlshortener (0.1.0):
+  - Google-API-Client/SQLAdmin (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/YouTube (0.1.0):
+  - Google-API-Client/Storage (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
-  - Google-API-Client/YouTubeAnalytics (0.1.0):
+  - Google-API-Client/Tasks (0.1.1):
+    - Google-API-Client/Common
+    - gtm-oauth2
+    - GTMHTTPFetcher
+  - Google-API-Client/Urlshortener (0.1.1):
+    - Google-API-Client/Common
+    - gtm-oauth2
+    - GTMHTTPFetcher
+  - Google-API-Client/YouTube (0.1.1):
+    - Google-API-Client/Common
+    - gtm-oauth2
+    - GTMHTTPFetcher
+  - Google-API-Client/YouTubeAnalytics (0.1.1):
     - Google-API-Client/Common
     - gtm-oauth2
     - GTMHTTPFetcher
@@ -161,48 +180,43 @@ PODS:
     - GTMHTTPFetcher
   - GTMHTTPFetcher (0.1.0)
   - HexColors (2.2.1)
-  - InstagramKit (2.1.0):
+  - InstagramKit (3.1.1):
     - AFNetworking (~> 2.0)
   - IOSLinkedInAPI (2.0.0):
     - AFNetworking (>= 2.0.0)
   - JXHTTP (1.0.0)
-  - Kiwi (2.2.4):
-    - Kiwi/SenTestingKit
-  - Kiwi/ARC (2.2.4)
-  - Kiwi/NonARC (2.2.4)
-  - Kiwi/SenTestingKit (2.2.4):
-    - Kiwi/ARC
-    - Kiwi/NonARC
+  - Kiwi (2.3.0)
   - LBBlurredImage (0.2.0)
-  - Mantle (1.4.1):
+  - Mantle (1.5):
     - Mantle/extobjc
-  - Mantle/extobjc (1.4.1)
-  - MBProgressHUD (0.8)
+  - Mantle/extobjc (1.5)
+  - MBProgressHUD (0.9)
   - Pinterest-iOS (2.3)
   - Reachability (3.1.1)
-  - ReactiveCocoa (2.2.4):
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
     - ReactiveCocoa/Core
-    - ReactiveCocoa/no-arc
-  - ReactiveCocoa/Core (2.2.4):
-    - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.2.4)
-  - SBJson (4.0.0)
-  - TMTumblrSDK (1.0.6):
+  - SBJson (4.0.1)
+  - TMTumblrSDK (1.0.8):
     - TMTumblrSDK/Activity
     - TMTumblrSDK/APIClient
     - TMTumblrSDK/AppClient
     - TMTumblrSDK/Core
-  - TMTumblrSDK/Activity (1.0.6)
-  - TMTumblrSDK/APIClient (1.0.6):
+  - TMTumblrSDK/Activity (1.0.8)
+  - TMTumblrSDK/APIClient (1.0.8):
     - JXHTTP (= 1.0.0)
     - TMTumblrSDK/APIClient/Authentication
-  - TMTumblrSDK/APIClient/Authentication (1.0.6):
+  - TMTumblrSDK/APIClient/Authentication (1.0.8):
     - JXHTTP (= 1.0.0)
     - TMTumblrSDK/Core
-  - TMTumblrSDK/AppClient (1.0.6):
+  - TMTumblrSDK/AppClient (1.0.8):
     - TMTumblrSDK/Core
-  - TMTumblrSDK/Core (1.0.6)
-  - TSMessages (0.9.6):
+  - TMTumblrSDK/Core (1.0.8)
+  - TSMessages (0.9.10):
     - HexColors
   - unoffical-twitter-sdk (0.0.1):
     - SBJson
@@ -234,30 +248,31 @@ EXTERNAL SOURCES:
     :path: /Users/platzerworld/cocoapodsrepo/BiergartenFetcher/0.0.1
 
 SPEC CHECKSUMS:
-  AFNetworking: 0121f4b69be3fa58d1ab317866e036e12ac9651d
+  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   BiergartenFetcher: 7dbc077a44d8646e68787586b1596791f8e3d87c
-  Dropbox-iOS-SDK: c3f646025b276846a5c481621753d7819abc1c36
-  Facebook-iOS-SDK: 5788541337dc88265bc940cb5ffb05915f9b64e3
-  FlickrKit: b096e8995b2e830c302f4a2c03e87242d5f9f63a
-  Foursquare-API-v2: cb5609c318903a4d80a58d7d476298362e889a9b
-  Foursquare-iOS-API: 5c306411e8b24fa69adc7d8a357e48dc0ba6e60b
-  Google-API-Client: cca52ff4d1d69e2910f7d53c56629c8556b8ed0a
-  gtm-oauth2: ec43e283197a3c2eb14e1f3724a83fe2aeb45791
-  GTMHTTPFetcher: 1ec07b08bc1df7bf37ad32b3c2adefa020a4b644
-  HexColors: 3a68db077cd6572a8f7d4aa1add284dd2436a934
-  InstagramKit: 0fd45aa4cfec4d4768960409d67910f88406dfcf
-  IOSLinkedInAPI: 1c1b1bc3fcf21607225d2b9cd704bffab0abfbe1
-  JXHTTP: 04f027e55c252d206cf3fcc2a2bde3914a35d842
-  Kiwi: d60d7498b640a16f58b01925fc3c8d7c4d809f66
-  LBBlurredImage: 26bacd10063a6e886de6a374f4727c3cefb22fc2
-  Mantle: 0714cdb2b8559d9e6c2410d6a8529e3307bff189
-  MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622
-  Pinterest-iOS: 9c026adbeb8890ad519356f9b95299844293fc04
-  Reachability: be4883bb93f31e38266ae3365e5600a317aae735
-  ReactiveCocoa: 953a45dda30674fe704d1d9c77cc874141742f47
-  SBJson: f3c686806e8e36ab89e020189ac582ba26ec4220
-  TMTumblrSDK: cc16af8cfc8124926ab202455c1a6c87ff8725b3
-  TSMessages: 839edc3164b99ced48c30af9dde9710cd67bea4d
-  unoffical-twitter-sdk: 54e9d23bf6970001d5f22f42f8d2d05267c8a32d
+  Bolts: 2635e8698a630774689441047f3465d78c48d485
+  Dropbox-iOS-SDK: 3bd81e7abfeb66b8fced09768db0166286a90f3f
+  Facebook-iOS-SDK: fa12c51cc57bfb6f92e47793c9d4d2c65bc92741
+  FlickrKit: 1bbc5c91f065fa0d7ce4119c5d5c63a9241eea73
+  Foursquare-API-v2: 31b9b6a9e68bc914bae4d3e20d65dc2826f4394d
+  Foursquare-iOS-API: 5e4b94fcb4fb74c8f0b0598445502bf691dd5f6b
+  Google-API-Client: 69cd2a04c649abe9f3fa6695bc4bb8965373f204
+  gtm-oauth2: 64f2d404a50676ab63b5437a02a7567da8f8b7fa
+  GTMHTTPFetcher: 0f02d5a5803dd08736462981064de6a7f59cf9bd
+  HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
+  InstagramKit: 9ad28b1e68ab0078fdd1ff40825d977f9dfc59c5
+  IOSLinkedInAPI: 5b400668a260a3594af94e363ade95933ce22db8
+  JXHTTP: dd1fe9c6fa21e7b2be9724ef2be16c66aafc44b4
+  Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
+  LBBlurredImage: 30cc42be977bbcece286d26d2d9c08b8be7f05e8
+  Mantle: c67a7e45e14196ed42b2a7cbb98ff6a9920e6b92
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  Pinterest-iOS: 418044a91ac88d370a54ce06b89ee034c240171d
+  Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
+  ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
+  SBJson: d71212c078abf4679d54b0d0565260c474e46235
+  TMTumblrSDK: b9fada23e88b42ade2b492a6db95bfb1dff6304b
+  TSMessages: 8598a0645e9d54847f6e5f3b070bef39c493bbf8
+  unoffical-twitter-sdk: 4ac641555b0d3f6e9970c99a1fa4291fb306ba65
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.32.1

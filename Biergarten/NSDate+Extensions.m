@@ -82,7 +82,7 @@
    static NSDateFormatter *oDateFormatter = nil;
    
    if (oDateFormatter == nil) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"yyyy-MM-dd";
@@ -113,7 +113,7 @@
    static NSDateFormatter *oDateFormatter = nil;
    
    if (oDateFormatter == nil) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"HH:mm";
@@ -199,7 +199,7 @@
    static NSDateFormatter *oDateFormatter = nil;
    
    if (oDateFormatter == nil) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"yyyy-MM-dd--HH-mm-ss'.png'";
@@ -219,7 +219,7 @@
    static NSDateFormatter *oDateFormatter = nil;
    
    if (oDateFormatter == nil) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"yyyy-MM-dd HH:mm";
@@ -239,7 +239,7 @@
    static NSDateFormatter *oDateFormatter = nil;
    
    if (oDateFormatter == nil) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"EE, dd.MM.yyyy";
@@ -259,7 +259,7 @@
    static NSDateFormatter *oDateFormatter = nil;
    
    if (oDateFormatter == nil) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"EEEE, dd.MM.yyyy HH:mm";
@@ -279,7 +279,7 @@
    static NSDateFormatter *oDateFormatter = nil;
    
    if (oDateFormatter == nil) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"HH";
@@ -305,7 +305,7 @@
    static NSDateFormatter *oDateFormatter = nil;
    
    if (oDateFormatter == nil) {
-      NSLocale *oLocale = [[NSLocale alloc] init];
+      NSLocale *oLocale = [NSLocale new];
       oDateFormatter = [[NSDateFormatter alloc] init];
       oDateFormatter.locale = oLocale;
       oDateFormatter.dateFormat = @"EEEE, HH:mm";
