@@ -145,7 +145,7 @@
     FBShareDialogParams *p = [[FBShareDialogParams alloc] init];
     p.link = [NSURL URLWithString:@"http://developers.facebook.com/ios"];
 #ifdef DEBUG
-    [FBSettings enableBetaFeatures:FBBetaFeaturesShareDialog];
+    //[FBSettings enableBetaFeatures:FBBetaFeaturesShareDialog];
 #endif
     BOOL canShareFB = [FBDialogs canPresentShareDialogWithParams:p];
     BOOL canShareiOS6 = [FBDialogs canPresentOSIntegratedShareDialogWithSession:nil];
@@ -400,7 +400,7 @@
     params.name = @"Sharing Tutorial";
     params.caption = @"Build great social apps and get more installs.";
     params.picture = [NSURL URLWithString:@"http://i.imgur.com/g3Qc1HN.png"];
-    params.description = @"Allow your users to share stories on Facebook from your app using the iOS SDK.";
+    //params.description = @"Allow your users to share stories on Facebook from your app using the iOS SDK.";
     
     
     // If the Facebook app is installed and we can present the share dialog
