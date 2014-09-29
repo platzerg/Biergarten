@@ -109,6 +109,7 @@
 		0B56111E18D2012500F1A4DB /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B56111D18D2012500F1A4DB /* blue.png */; };
 		0B56112218D20B4900F1A4DB /* PWGooglePlusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B56112118D20B4900F1A4DB /* PWGooglePlusViewController.m */; };
 		0B60767D18E17DFE00A04E5C /* ilike.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B60767F18E17DFE00A04E5C /* ilike.png */; };
+		0BC7F1EE19D9D2F800FB7FF9 /* KWXCFunctionalTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC7F1ED19D9D2F800FB7FF9 /* KWXCFunctionalTest.m */; };
 		0BF7A83718DC8D3F00BEE29C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF7A83618DC8D3F00BEE29C /* CoreData.framework */; };
 		0BF7A83918DC8D4D00BEE29C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF7A83818DC8D4D00BEE29C /* CoreText.framework */; };
 		0BF7A86718DC8F8000BEE29C /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7A83E18DC8F8000BEE29C /* Functions.m */; };
@@ -319,6 +320,7 @@
 		0B60767A18E17C0200A04E5C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B60767E18E17DFE00A04E5C /* de */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = de; path = de.lproj/ilike.png; sourceTree = "<group>"; };
 		0B60768018E17E0900A04E5C /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/ilike.png; sourceTree = "<group>"; };
+		0BC7F1ED19D9D2F800FB7FF9 /* KWXCFunctionalTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWXCFunctionalTest.m; sourceTree = "<group>"; };
 		0BF7A83618DC8D3F00BEE29C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0BF7A83818DC8D4D00BEE29C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		0BF7A83D18DC8F8000BEE29C /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
@@ -579,6 +581,7 @@
 			children = (
 				0B56103B18D1DD7300F1A4DB /* BiergartenTests.m */,
 				0B56103618D1DD7300F1A4DB /* Supporting Files */,
+				0BC7F1ED19D9D2F800FB7FF9 /* KWXCFunctionalTest.m */,
 			);
 			path = BiergartenTests;
 			sourceTree = "<group>";
@@ -1222,6 +1225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B56103C18D1DD7300F1A4DB /* BiergartenTests.m in Sources */,
+				0BC7F1EE19D9D2F800FB7FF9 /* KWXCFunctionalTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

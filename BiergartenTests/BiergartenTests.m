@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import <DropboxSDK/DropboxSDK.h>
 #import "PWAppDelegate.h"
+#import <Kiwi/Kiwi.h>
 
 @interface BiergartenTests : XCTestCase
 @property (nonatomic, retain) UIViewController *mapviewcontroller;
@@ -33,6 +34,7 @@
     self.dopboxViewController = [storyboard instantiateViewControllerWithIdentifier:@"PWDopboxViewController"];
     
     self.appDel = (PWAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [[KWFailure new] clearStubs];
 }
 
 - (void)tearDown
