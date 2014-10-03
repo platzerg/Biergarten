@@ -6,7 +6,9 @@
 			<arg line="-scheme Biergarten" />
 			<arg line="-sdk iphonesimulator7.0" />
 			<arg line="-configuration Debug" />
-			<arg line="-arch i386 "/>
+			<arg line="-arch i386"/>
+			<arg line="OBJROOT=$(PWD)/build"/>
+			<arg line="SYMROOT=$(PWD)/build"/>
 		</exec>
 	</target>
 	
