@@ -1,0 +1,143 @@
+xcodebuild -showsdks                              16:31 ttys000 |                  
+2014-10-03 16:32:09.070 xcodebuild[62821:1007] [MT] PluginLoading: Required plug-in compatibility                 
+ UUID C4A681B0-4A26-480E-93EC-1218098B9AA0 for plug-in at path '~/Library/Application Support/Dev                 
+eloper/Shared/Xcode/Plug-ins/CocoaPods.xcplugin' not present in DVTPlugInCompatibilityUUIDs                       
+2014-10-03 16:32:09.071 xcodebuild[62821:1007] [MT] PluginLoading: Required plug-in compatibility                 
+ UUID C4A681B0-4A26-480E-93EC-1218098B9AA0 for plug-in at path '~/Library/Application Support/Dev                 
+eloper/Shared/Xcode/Plug-ins/Alcatraz.xcplugin' not present in DVTPlugInCompatibilityUUIDs                        
+OS X SDKs:                                                                                                        
+        OS X 10.9                       -sdk macosx10.9                                                           
+                                                                                                                  
+iOS SDKs:                                                                                                         
+        iOS 8.0                         -sdk iphoneos8.0                                                          
+                                                                                                                  
+iOS Simulator SDKs:                                                                                               
+        Simulator - iOS 7.0             -sdk iphonesimulator7.0                                                   
+        Simulator - iOS 7.1             -sdk iphonesimulator7.1                                                   
+        Simulator - iOS 8.0             -sdk iphonesimulator8.0
+
+
+
+
+
+ xcodebuild -list       16:34 ttys000 |                  
+2014-10-03 16:34:33.184 xcodebuild[63164:1007] [MT] PluginLoading: Required plug-in compatibility                 
+ UUID C4A681B0-4A26-480E-93EC-1218098B9AA0 for plug-in at path '~/Library/Application Support/Dev                 
+eloper/Shared/Xcode/Plug-ins/CocoaPods.xcplugin' not present in DVTPlugInCompatibilityUUIDs                       
+2014-10-03 16:34:33.186 xcodebuild[63164:1007] [MT] PluginLoading: Required plug-in compatibility                 
+ UUID C4A681B0-4A26-480E-93EC-1218098B9AA0 for plug-in at path '~/Library/Application Support/Dev                 
+eloper/Shared/Xcode/Plug-ins/Alcatraz.xcplugin' not present in DVTPlugInCompatibilityUUIDs                        
+Information about project "Biergarten":                                                                           
+    Targets:                                                                                                      
+        Biergarten                                                                                                
+        BiergartenTests                                                                                           
+                                                                                                                  
+    Build Configurations:                                                                                         
+        Debug                                                                                                     
+        Release                                                                                                   
+                                                                                                                  
+    If no build configuration is specified and -scheme is not passed then "Release" is used.                      
+                                                                                                                  
+    Schemes:                                                                                                      
+        Biergarten                                                                                                
+        Tests                                                       
+        
+
+
+
+
+# Append to your Podfile
+post_install do |installer_representation|
+    installer_representation.project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+        end
+    end
+end        
+        
+xcodebuild -sdk iphonesimulator7.0 -configuration Debug -target Biergarten OBJROOT=$(PWD)/build SYMROOT=$(PWD)/build
+xcodebuild -workspace ClientName.xcworkspace -scheme AppName -configuration "ProdAdHoc" -sdk iphoneos -arch "armv6 armv7"
+
+xcodebuild -workspace Biergarten.xcworkspace -scheme Biergarten -configuration "Debug" -sdk iphonesimulator7.0 -arch "i386"
+
+xcodebuild -workspace Biergarten.xcworkspace -scheme Biergarten -configuration "ProdAdHoc" -sdk iphonesimulator7.0 -arch "arm64"
+xcodebuild -workspace Biergarten.xcworkspace -scheme Biergarten -configuration "ProdAdHoc" -sdk iphonesimulator7.0 -arch "armv7"
+xcodebuild -workspace Biergarten.xcworkspace -scheme Biergarten -configuration "ProdAdHoc" -sdk iphonesimulator7.0 -arch "armv7s"
+
+ARMv8/ARM64: iPhone 5s, iPad Air, Retina iPad Mini
+ARMv7s: iPhone 5, iPhone 5c, iPad 4
+ARMv7: iPhone 3GS, iPhone 4, iPhone 4S, iPod 3G/4G/5G, iPad, iPad 2, iPad 3, iPad Mini
+ARMv6: iPhone, iPhone 3G, iPod 1G/2G
+
+man xcodebuild
+
+xcodebuild -workspace Biergarten.xcworkspace -scheme Biergarten -sdk iphonesimulator7.0 -configuration Release -arch "i386"
+
+ONLY_ACTIVE_ARCH = NO;
+
+
+
+
+ xcodebuild -help                                                                   16:54 ttys000 | 
+Usage: xcodebuild [-project <projectname>] [[-target <targetname>]...|-alltargets] [-configuration <configurationname>] [-arch <architecture>]... [-sdk [<sdk
+name>|<sdkpath>]] [-showBuildSettings] [<buildsetting>=<value>]... [<buildaction>]...                                                                        
+       xcodebuild [-project <projectname>] -scheme <schemeName> [-destination <destinationspecifier>]... [-configuration <configurationname>] [-arch <archite
+cture>]... [-sdk [<sdkname>|<sdkpath>]] [-showBuildSettings] [<buildsetting>=<value>]... [<buildaction>]...                                                  
+       xcodebuild -workspace <workspacename> -scheme <schemeName> [-destination <destinationspecifier>]... [-configuration <configurationname>] [-arch <archi
+tecture>]... [-sdk [<sdkname>|<sdkpath>]] [-showBuildSettings] [<buildsetting>=<value>]... [<buildaction>]...                                                
+       xcodebuild -version [-sdk [<sdkfullpath>|<sdkname>] [<infoitem>] ]                                                                                    
+       xcodebuild -list [[-project <projectname>]|[-workspace <workspacename>]]                                                                              
+       xcodebuild -showsdks                                                                                                                                  
+       xcodebuild -exportArchive -exportFormat <format> -archivePath <xcarchivepath> -exportPath <destinationpath> [-exportProvisioningProfile <profilename>]
+ [-exportSigningIdentity <identityname>] [-exportInstallerIdentity <identityname>]                                                                           
+       xcodebuild -exportLocalizations -localizationPath <path> -project <projectname> [[-exportLanguage <targetlanguage>]]                                  
+Options:                                                                                                                                                     
+    -usage                                    print brief usage                                                                                              
+    -help                                     print complete usage                                                                                           
+    -verbose                                  provide additional status output                                                                               
+    -license                                  show the Xcode and SDK license agreements                                                                      
+    -checkFirstLaunchStatus                   Check if any First Launch tasks need to be performed                                                           
+    -project NAME                             build the project NAME                                                                                         
+    -target NAME                              build the target NAME                                                                                          
+    -alltargets                               build all targets                                                                                              
+    -workspace NAME                           build the workspace NAME                                                                                       
+    -scheme NAME                              build the scheme NAME                                                                                          
+    -configuration NAME                       use the build configuration NAME for building each target                                                      
+    -xcconfig PATH                            apply the build settings defined in the file at PATH as overrides                                              
+    -arch ARCH                                build each target for the architecture ARCH; this will override architectures defined in the project           
+    -sdk SDK                                  use SDK as the name or path of the base SDK when building the project                                          
+    -toolchain NAME                           use the toolchain with identifier or name NAME                                                                 
+    -destination DESTINATIONSPECIFIER         use the destination described by DESTINATIONSPECIFIER (a comma-separated set of key=value pairs describing the 
+destination to use)                                                                                                                                          
+    -destination-timeout TIMEOUT              wait for TIMEOUT seconds while searching for the destination device                                            
+    -parallelizeTargets                       build independent targets in parallel                                                                          
+    -jobs NUMBER                              specify the maximum number of concurrent build operations                                                      
+    -dry-run                                  do everything except actually running the commands                                                             
+    -showsdks                                 display a compact list of the installed SDKs                                                                   
+    -showBuildSettings                        display a list of build settings and values                                                                    
+    -list                                     lists the targets and configurations in a project, or the schemes in a workspace                               
+    -find-executable NAME                     display the full path to executable NAME in the provided SDK and toolchain                                     
+    -find-library NAME                        display the full path to library NAME in the provided SDK and toolchain                                        
+    -version                                  display the version of Xcode; with -sdk will display info about one or all installed SDKs                      
+    -resultBundlePath PATH                    specifies the directory where a result bundle describing what occurred will be placed                          
+    -derivedDataPath PATH                     specifies the directory where build products and other derived data will go                                    
+    -archivePath PATH                         specifies the directory where any created archives will be placed, or the archive that should be exported      
+    -exportArchive                            specifies that an archive should be exported                                                                   
+    -exportFormat FORMAT                      specifies the format that the archive should be exported as (e.g. ipa, pkg, app)                               
+    -exportPath PATH                          specifies the destination for the product exported from an archive                                             
+    -exportProvisioningProfile PROFILE NAME   specifies the provisioning profile that should be used when re-signing the exported archive; if possible, impli
+es a signing identity                                                                                                                                        
+    -exportSigningIdentity IDENTITY NAME      specifies the codesigning identity that should be used to re-sign the exported archive                         
+    -exportInstallerIdentity IDENTITY NAME    specifies the installer signing identity that should be used during export; this may be inferable from -exportS
+igningIdentity                                                                                                                                               
+    -exportWithOriginalSigningIdentity        specifies that the signing identity used to create the archive should be used to sign the exported product     
+    -skipUnavailableActions                   specifies that scheme actions that cannot be performed should be skipped instead of causing a failure          
+    -exportLocalizations                      exports completed and outstanding project localizations                                                        
+    -localizationPath                         specifies a path to XLIFF localization files                                                                   
+    -exportLanguage                           specifies optional ISO 639-1 target languages included in a localization export
+
+
+
+
+
+
