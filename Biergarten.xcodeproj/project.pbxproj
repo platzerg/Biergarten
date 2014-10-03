@@ -10,6 +10,7 @@
 		0B2560A019DF0AF300E1E972 /* ios_development-4.cer in Resources */ = {isa = PBXBuildFile; fileRef = 0B25609E19DF0AF300E1E972 /* ios_development-4.cer */; };
 		0B2560A119DF0AF300E1E972 /* build.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0B25609F19DF0AF300E1E972 /* build.xml */; };
 		0B2560A319DF20C000E1E972 /* xcode_build.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B2560A219DF20C000E1E972 /* xcode_build.txt */; };
+		0B2560AA19DF341800E1E972 /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 0B2560A919DF341800E1E972 /* Podfile.lock */; };
 		0B2D52C218E09F7E007147B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2D52C118E09F7E007147B0 /* QuartzCore.framework */; };
 		0B2D52C618E09FAD007147B0 /* SGTouchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D52C518E09FAD007147B0 /* SGTouchPresenter.m */; };
 		0B2D52D318E0B56F007147B0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B2D52D218E0B56F007147B0 /* Settings.bundle */; };
@@ -168,6 +169,7 @@
 		0B25609E19DF0AF300E1E972 /* ios_development-4.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ios_development-4.cer"; sourceTree = "<group>"; };
 		0B25609F19DF0AF300E1E972 /* build.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		0B2560A219DF20C000E1E972 /* xcode_build.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xcode_build.txt; sourceTree = "<group>"; };
+		0B2560A919DF341800E1E972 /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		0B2D52C118E09F7E007147B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0B2D52C418E09FAD007147B0 /* SGTouchPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTouchPresenter.h; sourceTree = "<group>"; };
 		0B2D52C518E09FAD007147B0 /* SGTouchPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTouchPresenter.m; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 		0B56100418D1DD7300F1A4DB = {
 			isa = PBXGroup;
 			children = (
+				0B2560A919DF341800E1E972 /* Podfile.lock */,
 				0B2560A219DF20C000E1E972 /* xcode_build.txt */,
 				0B25609E19DF0AF300E1E972 /* ios_development-4.cer */,
 				0B25609F19DF0AF300E1E972 /* build.xml */,
@@ -1084,6 +1087,7 @@
 				0B60767D18E17DFE00A04E5C /* ilike.png in Resources */,
 				0B5610FA18D1E5B600F1A4DB /* RemoveRegion.png in Resources */,
 				0B56111818D1FB1400F1A4DB /* tumblr.png in Resources */,
+				0B2560AA19DF341800E1E972 /* Podfile.lock in Resources */,
 				0B56107518D1E00900F1A4DB /* weather-few.png in Resources */,
 				0B2560A319DF20C000E1E972 /* xcode_build.txt in Resources */,
 				0B56107618D1E00900F1A4DB /* weather-few@2x.png in Resources */,
@@ -1138,7 +1142,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\ncat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\nexit 1\nfi\n";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
