@@ -1,0 +1,30 @@
+<project name="Biergarten" default="simulatorbuild" basedir=".">
+
+	<target name="simulatorbuild">
+		<exec executable="xcodebuild" failonerror="true">
+			<arg line="-workspace Biergarten.xcworkspace" />
+			<arg line="-scheme Biergarten" />
+			<arg line="-sdk iphonesimulator7.0" />
+			<arg line="-configuration Debug" />
+			<arg line="-arch i386 "/>
+		</exec>
+	</target>
+	
+	<target name="devicebuild">
+		<exec executable="xcodebuild" failonerror="true">
+			<arg line="-workspace Biergarten.xcworkspace" />
+			<arg line="-scheme Biergarten" />
+			<arg line="-sdk iphonesimulator7.0" />
+			<arg line="-configuration Debug" />
+			<arg line="-arch i386 "/>
+		</exec>
+	</target>
+	
+	<target name="clean">
+		<exec executable="xcodebuild" failonerror="true">
+			<arg line="-alltargets" />
+			<arg line="clean" />
+		</exec>
+	</target>
+	
+</project>
