@@ -113,6 +113,8 @@
 		0B56111E18D2012500F1A4DB /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B56111D18D2012500F1A4DB /* blue.png */; };
 		0B56112218D20B4900F1A4DB /* PWGooglePlusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B56112118D20B4900F1A4DB /* PWGooglePlusViewController.m */; };
 		0B60767D18E17DFE00A04E5C /* ilike.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B60767F18E17DFE00A04E5C /* ilike.png */; };
+		0B63568219E027090020E2CE /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 0B63568019E027090020E2CE /* Gemfile.lock */; };
+		0B63568319E027090020E2CE /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 0B63568119E027090020E2CE /* Gemfile */; };
 		0BC7F1EE19D9D2F800FB7FF9 /* KWXCFunctionalTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC7F1ED19D9D2F800FB7FF9 /* KWXCFunctionalTest.m */; };
 		0BF7A83718DC8D3F00BEE29C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF7A83618DC8D3F00BEE29C /* CoreData.framework */; };
 		0BF7A83918DC8D4D00BEE29C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF7A83818DC8D4D00BEE29C /* CoreText.framework */; };
@@ -328,6 +330,8 @@
 		0B60767A18E17C0200A04E5C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B60767E18E17DFE00A04E5C /* de */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = de; path = de.lproj/ilike.png; sourceTree = "<group>"; };
 		0B60768018E17E0900A04E5C /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/ilike.png; sourceTree = "<group>"; };
+		0B63568019E027090020E2CE /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		0B63568119E027090020E2CE /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		0BC7F1ED19D9D2F800FB7FF9 /* KWXCFunctionalTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWXCFunctionalTest.m; sourceTree = "<group>"; };
 		0BF7A83618DC8D3F00BEE29C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0BF7A83818DC8D4D00BEE29C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -400,7 +404,8 @@
 		0BF9ABF218E01D6B008E75B0 /* Getraenke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Getraenke.h; path = ../Getraenke.h; sourceTree = "<group>"; };
 		0BF9ABF318E01D6B008E75B0 /* Getraenke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Getraenke.m; path = ../Getraenke.m; sourceTree = "<group>"; };
 		6799EB7A36FD4E32BB924E15 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B825D15DA9D9F6C1206CBD08 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E55E4A22A81D46E98B3CC770 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,6 +511,8 @@
 		0B56100418D1DD7300F1A4DB = {
 			isa = PBXGroup;
 			children = (
+				0B63568019E027090020E2CE /* Gemfile.lock */,
+				0B63568119E027090020E2CE /* Gemfile */,
 				0B2560A919DF341800E1E972 /* Podfile.lock */,
 				0B2560A219DF20C000E1E972 /* xcode_build.txt */,
 				0B25609E19DF0AF300E1E972 /* ios_development-4.cer */,
@@ -515,7 +522,7 @@
 				0B56103518D1DD7300F1A4DB /* BiergartenTests */,
 				0B56100F18D1DD7300F1A4DB /* Frameworks */,
 				0B56100E18D1DD7300F1A4DB /* Products */,
-				8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */,
+				5F64C6D9678BDD6BBFEF901D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -971,6 +978,15 @@
 			name = DataModel;
 			sourceTree = "<group>";
 		};
+		5F64C6D9678BDD6BBFEF901D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E55E4A22A81D46E98B3CC770 /* Pods.debug.xcconfig */,
+				B825D15DA9D9F6C1206CBD08 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1067,6 +1083,7 @@
 				0B56111E18D2012500F1A4DB /* blue.png in Resources */,
 				0B56108818D1E00900F1A4DB /* bg@2x.png in Resources */,
 				0B56108F18D1E02A00F1A4DB /* Icon-72@2x.png in Resources */,
+				0B63568319E027090020E2CE /* Gemfile in Resources */,
 				0B56107D18D1E00900F1A4DB /* weather-rain.png in Resources */,
 				0B56107B18D1E00900F1A4DB /* weather-rain-night.png in Resources */,
 				0B5610FB18D1E5B600F1A4DB /* RemoveRegion@2x.png in Resources */,
@@ -1079,6 +1096,7 @@
 				0BF9ABE618E01A6A008E75B0 /* biergarten.sqlite in Resources */,
 				0B56108118D1E00900F1A4DB /* weather-shower.png in Resources */,
 				0B56107918D1E00900F1A4DB /* weather-moon.png in Resources */,
+				0B63568219E027090020E2CE /* Gemfile.lock in Resources */,
 				0B2D52D318E0B56F007147B0 /* Settings.bundle in Resources */,
 				0B56107C18D1E00900F1A4DB /* weather-rain-night@2x.png in Resources */,
 				0B56108E18D1E02A00F1A4DB /* Icon-72.png in Resources */,
@@ -1128,7 +1146,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"$(PWD)/Podfile.lock\" \"$(PWD)/Pods/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\ncat << EOM\nerror: ${PODS_ROOT} The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\nexit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 		};
 		92FC98DE58B843DD9B525956 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1298,7 +1316,6 @@
 /* Begin XCBuildConfiguration section */
 		0B56103D18D1DD7300F1A4DB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1338,7 +1355,6 @@
 		};
 		0B56103E18D1DD7300F1A4DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1372,7 +1388,7 @@
 		};
 		0B56104018D1DD7300F1A4DB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */;
+			baseConfigurationReference = E55E4A22A81D46E98B3CC770 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1391,7 +1407,7 @@
 		};
 		0B56104118D1DD7300F1A4DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */;
+			baseConfigurationReference = B825D15DA9D9F6C1206CBD08 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1410,7 +1426,6 @@
 		};
 		0B56104318D1DD7300F1A4DB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Biergarten.app/Biergarten";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1433,7 +1448,6 @@
 		};
 		0B56104418D1DD7300F1A4DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A6F2DC0FD364F1F989294ED /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Biergarten.app/Biergarten";
 				FRAMEWORK_SEARCH_PATHS = (

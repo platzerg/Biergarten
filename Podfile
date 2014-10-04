@@ -1,4 +1,5 @@
 ### Implicit target definition :-/
+source 'https://github.com/CocoaPods/Specs.git'
 xcodeproj "Biergarten.xcodeproj"
 ####
 
@@ -30,6 +31,7 @@ pod 'TMTumblrSDK'
 pod 'MBProgressHUD'
 pod 'Kiwi'
 #pod 'YelpKit'
+#source 'https://github.com/CocoaPods/Specs.git'
 pod 'BiergartenFetcher', :path => '/Users/platzerworld/cocoapodsrepo/BiergartenFetcher/0.0.1'
 #pod 'unoffical-twitter-sdk', :path => '/Users/platzerworld/cocoapodsrepo/unoffical-twitter-sdk/0.0.1'
 #pod 'google-plus-ios-sdk', :path => '/Users/platzerworld/cocoapodsrepo/google-plus-ios-sdk/1.5.0'
