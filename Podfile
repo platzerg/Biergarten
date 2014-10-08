@@ -29,9 +29,14 @@ pod 'Pinterest-iOS'
 pod 'InstagramKit'
 pod 'TMTumblrSDK'
 pod 'MBProgressHUD'
-pod 'Kiwi'
+#pod 'Kiwi'
 #pod 'YelpKit'
 #source 'https://github.com/CocoaPods/Specs.git'
 pod 'BiergartenFetcher', :path => '/Users/platzerworld/cocoapodsrepo/BiergartenFetcher/0.0.1'
 #pod 'unoffical-twitter-sdk', :path => '/Users/platzerworld/cocoapodsrepo/unoffical-twitter-sdk/0.0.1'
 #pod 'google-plus-ios-sdk', :path => '/Users/platzerworld/cocoapodsrepo/google-plus-ios-sdk/1.5.0'
+link_with 'Biergarten', 'BiergartenTests'
+
+target :BiergartenTests do
+    pod 'Kiwi'
+end

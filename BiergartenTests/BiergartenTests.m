@@ -34,7 +34,7 @@
     self.dopboxViewController = [storyboard instantiateViewControllerWithIdentifier:@"PWDopboxViewController"];
     
     self.appDel = (PWAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [[KWFailure new] clearStubs];
+    //[[KWFailure new] clearStubs];
 }
 
 - (void)tearDown
@@ -55,10 +55,10 @@
 {
     XCTAssertNotNil(@1, @"foo");
     
-    [self.twitterViewController performSelectorOnMainThread:@selector(isTwitterLoginSucessful) withObject:nil waitUntilDone:YES];
+    //[self.twitterViewController performSelectorOnMainThread:@selector(isTwitterLoginSucessful) withObject:nil waitUntilDone:YES];
 }
 
-- (void)dropbox
+- (void)TestDropbox
 {
     [[DBSession sharedSession] unlinkAll];
     
