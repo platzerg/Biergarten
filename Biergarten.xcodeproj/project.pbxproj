@@ -27,7 +27,6 @@
 		0B56102118D1DD7300F1A4DB /* PWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B56102018D1DD7300F1A4DB /* PWAppDelegate.m */; };
 		0B56102418D1DD7300F1A4DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B56102218D1DD7300F1A4DB /* Main.storyboard */; };
 		0B56102918D1DD7300F1A4DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B56102818D1DD7300F1A4DB /* Images.xcassets */; };
-		0B56103018D1DD7300F1A4DB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B56102F18D1DD7300F1A4DB /* XCTest.framework */; };
 		0B56103118D1DD7300F1A4DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B56101018D1DD7300F1A4DB /* Foundation.framework */; };
 		0B56103218D1DD7300F1A4DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B56101418D1DD7300F1A4DB /* UIKit.framework */; };
 		0B56103A18D1DD7300F1A4DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B56103818D1DD7300F1A4DB /* InfoPlist.strings */; };
@@ -115,6 +114,9 @@
 		0B60767D18E17DFE00A04E5C /* ilike.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B60767F18E17DFE00A04E5C /* ilike.png */; };
 		0B63568219E027090020E2CE /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 0B63568019E027090020E2CE /* Gemfile.lock */; };
 		0B63568319E027090020E2CE /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 0B63568119E027090020E2CE /* Gemfile */; };
+		0B99095619E5228600892187 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B99095519E5228600892187 /* XCTest.framework */; };
+		0B99095719E5229F00892187 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B99095519E5228600892187 /* XCTest.framework */; };
+		0B99095819E5229F00892187 /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B99095519E5228600892187 /* XCTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0BC7F1EE19D9D2F800FB7FF9 /* KWXCFunctionalTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC7F1ED19D9D2F800FB7FF9 /* KWXCFunctionalTest.m */; };
 		0BF7A83718DC8D3F00BEE29C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF7A83618DC8D3F00BEE29C /* CoreData.framework */; };
 		0BF7A83918DC8D4D00BEE29C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF7A83818DC8D4D00BEE29C /* CoreText.framework */; };
@@ -167,6 +169,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0B99095919E522A000892187 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0B99095819E5229F00892187 /* XCTest.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0B25609E19DF0AF300E1E972 /* ios_development-4.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ios_development-4.cer"; sourceTree = "<group>"; };
 		0B25609F19DF0AF300E1E972 /* build.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
@@ -199,7 +215,6 @@
 		0B56102318D1DD7300F1A4DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B56102818D1DD7300F1A4DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B56102E18D1DD7300F1A4DB /* BiergartenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiergartenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B56102F18D1DD7300F1A4DB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0B56103718D1DD7300F1A4DB /* BiergartenTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BiergartenTests-Info.plist"; sourceTree = "<group>"; };
 		0B56103918D1DD7300F1A4DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B56103B18D1DD7300F1A4DB /* BiergartenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiergartenTests.m; sourceTree = "<group>"; };
@@ -332,6 +347,7 @@
 		0B60768018E17E0900A04E5C /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/ilike.png; sourceTree = "<group>"; };
 		0B63568019E027090020E2CE /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		0B63568119E027090020E2CE /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		0B99095519E5228600892187 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XCTest.framework; sourceTree = "<group>"; };
 		0BC7F1ED19D9D2F800FB7FF9 /* KWXCFunctionalTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWXCFunctionalTest.m; sourceTree = "<group>"; };
 		0BF7A83618DC8D3F00BEE29C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0BF7A83818DC8D4D00BEE29C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -420,6 +436,8 @@
 				0B56101518D1DD7300F1A4DB /* UIKit.framework in Frameworks */,
 				0B56101118D1DD7300F1A4DB /* Foundation.framework in Frameworks */,
 				294DE1F04FA345DBB50091BF /* libPods.a in Frameworks */,
+				0B99095719E5229F00892187 /* XCTest.framework in Frameworks */,
+				0B99095619E5228600892187 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +445,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B56103018D1DD7300F1A4DB /* XCTest.framework in Frameworks */,
 				0B56103218D1DD7300F1A4DB /* UIKit.framework in Frameworks */,
 				0B56103118D1DD7300F1A4DB /* Foundation.framework in Frameworks */,
 			);
@@ -538,13 +555,13 @@
 		0B56100F18D1DD7300F1A4DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B99095519E5228600892187 /* XCTest.framework */,
 				0B2D52C118E09F7E007147B0 /* QuartzCore.framework */,
 				0BF7A83818DC8D4D00BEE29C /* CoreText.framework */,
 				0BF7A83618DC8D3F00BEE29C /* CoreData.framework */,
 				0B56101018D1DD7300F1A4DB /* Foundation.framework */,
 				0B56101218D1DD7300F1A4DB /* CoreGraphics.framework */,
 				0B56101418D1DD7300F1A4DB /* UIKit.framework */,
-				0B56102F18D1DD7300F1A4DB /* XCTest.framework */,
 				6799EB7A36FD4E32BB924E15 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -999,6 +1016,7 @@
 				0B56100A18D1DD7300F1A4DB /* Frameworks */,
 				0B56100B18D1DD7300F1A4DB /* Resources */,
 				324C566929AB4A7390E70373 /* Copy Pods Resources */,
+				0B99095919E522A000892187 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1400,6 +1418,7 @@
 				GCC_PREFIX_HEADER = "Biergarten/Biergarten-Prefix.pch";
 				INFOPLIST_FILE = "Biergarten/Biergarten-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1419,6 +1438,7 @@
 				GCC_PREFIX_HEADER = "Biergarten/Biergarten-Prefix.pch";
 				INFOPLIST_FILE = "Biergarten/Biergarten-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
