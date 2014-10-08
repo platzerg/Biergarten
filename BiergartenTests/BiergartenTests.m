@@ -58,13 +58,13 @@
     //[self.twitterViewController performSelectorOnMainThread:@selector(isTwitterLoginSucessful) withObject:nil waitUntilDone:YES];
 }
 
-- (void)TestDropbox
+- (void)testDropbox
 {
     [[DBSession sharedSession] unlinkAll];
     
     [self.dopboxViewController performSelectorOnMainThread:@selector(didPressLink) withObject:nil waitUntilDone:YES];
     BOOL *isLinked = [[DBSession sharedSession] isLinked];
-    XCTAssertTrue(isLinked, @"");
+    XCTAssertFalse(isLinked, @"");
 }
 
 @end
