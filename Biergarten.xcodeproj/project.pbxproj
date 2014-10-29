@@ -497,8 +497,6 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>0B63568019E027090020E2CE</string>
-				<string>0B63568119E027090020E2CE</string>
 				<string>0B2560A919DF341800E1E972</string>
 				<string>0B2560A219DF20C000E1E972</string>
 				<string>0B25609E19DF0AF300E1E972</string>
@@ -716,7 +714,6 @@
 				<string>0B56111E18D2012500F1A4DB</string>
 				<string>0B56108818D1E00900F1A4DB</string>
 				<string>0B56108F18D1E02A00F1A4DB</string>
-				<string>0B63568319E027090020E2CE</string>
 				<string>0B56107D18D1E00900F1A4DB</string>
 				<string>0B56107B18D1E00900F1A4DB</string>
 				<string>0B5610FB18D1E5B600F1A4DB</string>
@@ -729,7 +726,6 @@
 				<string>0BF9ABE618E01A6A008E75B0</string>
 				<string>0B56108118D1E00900F1A4DB</string>
 				<string>0B56107918D1E00900F1A4DB</string>
-				<string>0B63568219E027090020E2CE</string>
 				<string>0B2D52D318E0B56F007147B0</string>
 				<string>0B56107C18D1E00900F1A4DB</string>
 				<string>0B56108E18D1E02A00F1A4DB</string>
@@ -4168,46 +4164,6 @@
 			<string>en.lproj/ilike.png</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0B63568019E027090020E2CE</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Gemfile.lock</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0B63568119E027090020E2CE</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Gemfile</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0B63568219E027090020E2CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0B63568019E027090020E2CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0B63568319E027090020E2CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0B63568119E027090020E2CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>0B99095519E5228600892187</key>
 		<dict>
