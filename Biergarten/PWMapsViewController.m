@@ -79,7 +79,10 @@
               address:biergartenItem.adresse.strasse
               coordinate:CLLocationCoordinate2DMake([biergartenItem.adresse.latitude doubleValue], [biergartenItem.adresse.longitude doubleValue])] ;
      
-        
+        biergarten = [PWBiergarten new];
+        biergarten.name = biergartenItem.name;
+        biergarten.plz = biergartenItem.adresse.plz;
+        biergarten.ort = biergartenItem.adresse.ort;
         
      annotation.biergarten = biergarten;
      [mapView addAnnotation:annotation];
@@ -227,7 +230,7 @@
 
             */
             
-            self.biergarten = location.biergarten;
+            biergarten = location.biergarten;
             [self performSegueWithIdentifier:@"PWDetail" sender:control];
             
             // [[PWManager sharedManager] setCurrentBiergarten:self.biergarten];
